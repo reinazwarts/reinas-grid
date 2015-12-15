@@ -143,14 +143,5 @@ input[type=text] {
     padding: 5px 10px;
     border: solid 1px #ccc;
 
-    -moz-border-radius: 5px;
-	/*for android separately*/
-	-webkit-border-top-left-radius: 5px;
-	border-top-left-radius: 5px;
-	-webkit-border-top-right-radius: 5px;
-	border-top-right-radius: 5px;
-	-webkit-border-bottom-right-radius: 5px;
-	border-bottom-right-radius: 5px;
-	-webkit-border-bottom-left-radius: 5px;
-	border-bottom-left-radius: 5px;
+    @include border-radius(5px, 5px, 5px, 5px);
 }
