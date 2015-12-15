@@ -8,7 +8,7 @@ html/css grid
 - Offset option (i.e. col-lg-offset-25)
 - No gutter option (.u-no-gutter)
 - Vertical gutter option (equal to horizontal gutter)
-- Gutter sizes expandable (gutter standard, guuter small etc.)
+- Gutter sizes expandable (gutter standard, gutter small etc.)
 - Push and pull options
 - Horizontal centered aligned columns option (with commensurate layout)
 - Vertical centered columns per row option

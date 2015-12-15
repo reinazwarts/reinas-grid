@@ -1,3 +1,8 @@
+// Dependencies 
+@import "scss/dependencies/variables";
+@import "scss/dependencies/mixins";
+@import "scss/dependencies/sprites";
+
 // Foundation
 @import "scss/foundation/fonts";
 @import "scss/foundation/colors";
@@ -5,10 +10,7 @@
 @import "scss/foundation/global";
 @import "scss/foundation/layout";
 
-// Dependencies 
-@import "scss/dependencies/variables";
-@import "scss/dependencies/mixins";
-@import "scss/dependencies/sprites";
+
 
 // Modules
 @import "scss/modules/buttons";
