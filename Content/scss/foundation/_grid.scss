@@ -200,17 +200,6 @@ $screensizes: (
 					[class*=col-]:first-child:nth-last-child(1) {
 						width: 100%;
 					}
-					/*overbodig???*/
-					/*[class*=col-]:first-child:nth-last-child(2),
-					[class*=col-]:first-child:nth-last-child(2) ~ [class*=col-] {
-						width: 50%;
-					}
-					[class*=col-]:first-child:nth-last-child(3),
-					[class*=col-]:first-child:nth-last-child(3) ~ [class*=col-],
-					[class*=col-]:first-child:nth-last-child(5),
-					[class*=col-]:first-child:nth-last-child(5) ~ [class*=col-] {
-						width: 50%;
-					}*/
 
 				}
 			} @elseif $name == md {
@@ -295,80 +284,18 @@ $screensizes: (
 
 
 
-/* justified flexgrid max 4 items on 1 row */
-.justified-flexgrid {
-	
-    .col- {
-	    width: 25%;
-    }
-    /* 1 item */
-    .col-:nth-child(4n+1) {
-	    clear: both;
-    }
-    .col-:first-child:nth-last-child(1) {
-	    width: 100%;
-    }
-
-    /*2 items*/
-    .col-:first-child:nth-last-child(2),
-    .col-:first-child:nth-last-child(2) ~ .col- {
-	    width: 50%;
-    }
-
-    /*3 or 5 items*/
-    .col-:first-child:nth-last-child(3),
-    .col-:first-child:nth-last-child(3) ~ .col-,
-    .col-:first-child:nth-last-child(5),
-    .col-:first-child:nth-last-child(5) ~ .col- {
-	    width: 33.3333%;
-    }
-    
-    .col-:first-child:nth-last-child(5) ~ .col-:nth-child(4n+1) {
-	    clear: none;
-    }
-    .col-:first-child:nth-last-child(5) ~ .col-:nth-child(3n+1) {
-	    clear: both;
-    }
-
-    @media all and (max-width: 399px) {
-	    .col- {
-		    width: 100%!important;
-		    float: none!important;
-	    }
-    }
-    @media all and (min-width: 400px) and (max-width: 579px) {
-	    .col- {
-		    width: 50%!important;
-		    float: left!important;
-		    clear: none!important;
-	    }
-	    .col-:nth-child(2n+1) {
-		    clear: both;
-	    }
-    }
-    @media all and (min-width: 580px) and (max-width: 767px) {
-	    .col- {
-		    width: 33.3333%!important;
-		    float: left!important;
-		    clear: none!important;
-	    }
-	    .col-:nth-child(3n+1) {
-		    clear: both;
-	    }
-    }    
-
-}
-
-
 
 
 
 
 
 /* vertical aligned flexgrid */
-/* NEEDS OPTIMIZATION:  */
-.valigned-flexgrid .col- {
-    vertical-align: middle;
-    float: none;
-    display: inline-block;
+.u-valigned {
+	font-size: 0;
+	[class*=col-] {
+		font-size: 1.6rem;
+        float: none;
+	    display: inline-block;
+	    vertical-align: middle;
+	}
 }
