@@ -180,21 +180,28 @@ $screensizes: (
 // justified grid (with equal width columns only!)
 // i.e. three columns of 25% become 33.3333% to fill up the row
 .u-justified {
+		[class*=col-] {
+			width: 100%;
+		}
 		@each $screensize in $screensizes {
 			$name:		nth($screensize, 1);
 			$min-width: nth($screensize, 2);
 			$max-width: nth($screensize, 3);
 
 			@if $name == sm {
-				/* #{$name}, #{$min-width}, #{$max-width} */
+
 				@media all and (min-width: $min-width) and (max-width: $max-width) {
 					[class*=col-] {
 						width: 50%;
 					}
+					[class*=col-]:nth-child(2n+1) {
+						clear: both;
+					}
 					[class*=col-]:first-child:nth-last-child(1) {
 						width: 100%;
 					}
-					[class*=col-]:first-child:nth-last-child(2),
+					/*overbodig???*/
+					/*[class*=col-]:first-child:nth-last-child(2),
 					[class*=col-]:first-child:nth-last-child(2) ~ [class*=col-] {
 						width: 50%;
 					}
@@ -203,23 +210,34 @@ $screensizes: (
 					[class*=col-]:first-child:nth-last-child(5),
 					[class*=col-]:first-child:nth-last-child(5) ~ [class*=col-] {
 						width: 50%;
-					}
+					}*/
 
 				}
 			} @elseif $name == md {
 
-				/* #{$name}, #{$min-width}, #{$max-width} */
-				@media all and (min-width: $min-width) {
+				@media all and (min-width: $min-width) and (max-width: $max-width) {
 					[class*=col-] {
 						width: 33%;
 					}
+					[class*=col-]:nth-child(3n+1) {
+						clear: both;
+					}
+
 					[class*=col-]:first-child:nth-last-child(1) {
 						width: 100%;
 					}
+
 					[class*=col-]:first-child:nth-last-child(2),
-					[class*=col-]:first-child:nth-last-child(2) ~ [class*=col-] {
+					[class*=col-]:first-child:nth-last-child(2) ~ [class*=col-],
+					[class*=col-]:first-child:nth-last-child(4),
+					[class*=col-]:first-child:nth-last-child(4) ~ [class*=col-] {
 						width: 50%;
+						clear: none;
 					}
+					[class*=col-]:first-child:nth-last-child(4) ~ [class*=col-]:nth-child(2n+1) {
+						clear: both;
+					}
+
 					[class*=col-]:first-child:nth-last-child(3),
 					[class*=col-]:first-child:nth-last-child(3) ~ [class*=col-],
 					[class*=col-]:first-child:nth-last-child(5),
@@ -231,25 +249,41 @@ $screensizes: (
 
 			} @elseif $name == lg {
 
-				/* #{$name}, #{$min-width}, #{$max-width} */
 				@media all and (min-width: $min-width) {
 					[class*=col-] {
 						width: 25%;
 					}
+					[class*=col-]:nth-child(4n+1) {
+						clear: both;
+					}
+
 					[class*=col-]:first-child:nth-last-child(1) {
 						width: 100%;
 					}
+
 					[class*=col-]:first-child:nth-last-child(2),
 					[class*=col-]:first-child:nth-last-child(2) ~ [class*=col-] {
 						width: 50%;
+						clear: none;
 					}
+					[class*=col-]:first-child:nth-last-child(2) ~ [class*=col-]:nth-child(2n+1) {
+						clear: both;
+					}
+
 					[class*=col-]:first-child:nth-last-child(3),
 					[class*=col-]:first-child:nth-last-child(3) ~ [class*=col-],
 					[class*=col-]:first-child:nth-last-child(5),
-					[class*=col-]:first-child:nth-last-child(5) ~ [class*=col-] {
+					[class*=col-]:first-child:nth-last-child(5) ~ [class*=col-],
+					[class*=col-]:first-child:nth-last-child(6),
+					[class*=col-]:first-child:nth-last-child(6) ~ [class*=col-] {
 						width: 33.3333%;
+						clear: none;
 					}
-
+					[class*=col-]:first-child:nth-last-child(3) ~ [class*=col-]:nth-child(3n+1),
+					[class*=col-]:first-child:nth-last-child(5) ~ [class*=col-]:nth-child(3n+1),
+					[class*=col-]:first-child:nth-last-child(6) ~ [class*=col-]:nth-child(3n+1) {
+						clear: both;
+					}
 				}
 
 			}

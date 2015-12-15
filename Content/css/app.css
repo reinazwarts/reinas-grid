@@ -925,41 +925,54 @@
   }
 }
 
-.u-justified {
-  /* sm, 480px, 599px */
-  /* md, 600px, 799px */
-  /* lg, 800px,  */
+.u-justified [class*=col-] {
+  width: 100%;
 }
 
 @media all and (min-width: 480px) and (max-width: 599px) {
+  .u-justified {
+    /*overbodig???*/
+    /*[class*=col-]:first-child:nth-last-child(2),
+					[class*=col-]:first-child:nth-last-child(2) ~ [class*=col-] {
+						width: 50%;
+					}
+					[class*=col-]:first-child:nth-last-child(3),
+					[class*=col-]:first-child:nth-last-child(3) ~ [class*=col-],
+					[class*=col-]:first-child:nth-last-child(5),
+					[class*=col-]:first-child:nth-last-child(5) ~ [class*=col-] {
+						width: 50%;
+					}*/
+  }
   .u-justified [class*=col-] {
     width: 50%;
   }
+  .u-justified [class*=col-]:nth-child(2n+1) {
+    clear: both;
+  }
   .u-justified [class*=col-]:first-child:nth-last-child(1) {
     width: 100%;
-  }
-  .u-justified [class*=col-]:first-child:nth-last-child(2),
-  .u-justified [class*=col-]:first-child:nth-last-child(2) ~ [class*=col-] {
-    width: 50%;
-  }
-  .u-justified [class*=col-]:first-child:nth-last-child(3),
-  .u-justified [class*=col-]:first-child:nth-last-child(3) ~ [class*=col-],
-  .u-justified [class*=col-]:first-child:nth-last-child(5),
-  .u-justified [class*=col-]:first-child:nth-last-child(5) ~ [class*=col-] {
-    width: 50%;
   }
 }
 
-@media all and (min-width: 600px) {
+@media all and (min-width: 600px) and (max-width: 799px) {
   .u-justified [class*=col-] {
     width: 33%;
+  }
+  .u-justified [class*=col-]:nth-child(3n+1) {
+    clear: both;
   }
   .u-justified [class*=col-]:first-child:nth-last-child(1) {
     width: 100%;
   }
   .u-justified [class*=col-]:first-child:nth-last-child(2),
-  .u-justified [class*=col-]:first-child:nth-last-child(2) ~ [class*=col-] {
+  .u-justified [class*=col-]:first-child:nth-last-child(2) ~ [class*=col-],
+  .u-justified [class*=col-]:first-child:nth-last-child(4),
+  .u-justified [class*=col-]:first-child:nth-last-child(4) ~ [class*=col-] {
     width: 50%;
+    clear: none;
+  }
+  .u-justified [class*=col-]:first-child:nth-last-child(4) ~ [class*=col-]:nth-child(2n+1) {
+    clear: both;
   }
   .u-justified [class*=col-]:first-child:nth-last-child(3),
   .u-justified [class*=col-]:first-child:nth-last-child(3) ~ [class*=col-],
@@ -973,18 +986,33 @@
   .u-justified [class*=col-] {
     width: 25%;
   }
+  .u-justified [class*=col-]:nth-child(4n+1) {
+    clear: both;
+  }
   .u-justified [class*=col-]:first-child:nth-last-child(1) {
     width: 100%;
   }
   .u-justified [class*=col-]:first-child:nth-last-child(2),
   .u-justified [class*=col-]:first-child:nth-last-child(2) ~ [class*=col-] {
     width: 50%;
+    clear: none;
+  }
+  .u-justified [class*=col-]:first-child:nth-last-child(2) ~ [class*=col-]:nth-child(2n+1) {
+    clear: both;
   }
   .u-justified [class*=col-]:first-child:nth-last-child(3),
   .u-justified [class*=col-]:first-child:nth-last-child(3) ~ [class*=col-],
   .u-justified [class*=col-]:first-child:nth-last-child(5),
-  .u-justified [class*=col-]:first-child:nth-last-child(5) ~ [class*=col-] {
+  .u-justified [class*=col-]:first-child:nth-last-child(5) ~ [class*=col-],
+  .u-justified [class*=col-]:first-child:nth-last-child(6),
+  .u-justified [class*=col-]:first-child:nth-last-child(6) ~ [class*=col-] {
     width: 33.3333%;
+    clear: none;
+  }
+  .u-justified [class*=col-]:first-child:nth-last-child(3) ~ [class*=col-]:nth-child(3n+1),
+  .u-justified [class*=col-]:first-child:nth-last-child(5) ~ [class*=col-]:nth-child(3n+1),
+  .u-justified [class*=col-]:first-child:nth-last-child(6) ~ [class*=col-]:nth-child(3n+1) {
+    clear: both;
   }
 }
 
