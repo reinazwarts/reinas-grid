@@ -1,0 +1,41 @@
+.browser-width {
+    width: 100%;
+    font-size: 1.6rem;//repeat this here to solve a strange problem with jquery
+}
+.content-width {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    max-width: 73.125em; //=1170px    
+}
+.container {
+    margin-bottom: ($gutter);
+}
+
+
+
+// dependencies of blocks
+.area-main-content .o-rte + .o-rte,
+.area-main-content .o-download-list + .o-download-list,
+.area-main-content .o-download-list + .o-rte,
+.area-main-content .o-rte + .o-download-list,
+.area-main-content .o-quotes + .o-download-list,
+.area-main-content .o-download-list + .o-quotes,
+.area-main-content .o-quotes + .o-rte,
+.area-main-content .o-rte + .o-quotes,
+.o-quotes + .o-quotes {
+    margin-top: -($gutter);
+}
+.area-main-content .o-rte + .o-download-list [class*=u-bgc-white] {
+    padding-top: 0;
+}
+
+.o-header--small + .o-teaser-style2,
+.o-header--small + .o-page-title,
+.o-header--large + .o-teaser-style2,
+.o-header--large + .o-page-title {
+    margin-top: -($gutter);
+    .content-width {
+        padding-top: 0;
+    }
+}

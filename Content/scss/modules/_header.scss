@@ -1,0 +1,142 @@
+.o-header-img {
+    display: block;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    position: relative;
+}
+
+.o-header-bottom {
+    background-color: #fff;
+    display: block;
+    padding: 13px ($gutter/2) 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    text-align: right;
+
+    @media all and (min-width: $screen-lg) {
+        padding: 23px ($gutter/2) 9px;
+        height: 80px;
+    }
+}
+
+.o-header-content {
+    width: 37%;
+    padding-top: 70px;
+    position: relative;
+    z-index: 1;
+
+    @media all and (max-width: $screen-xs-max) {
+        width: 87%;
+    }
+
+    @media all and (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+        width: 67%;
+    }
+
+    @media all and (min-width: $screen-md) and (max-width: $screen-md-max) {
+        width: 57%;
+    }
+}
+
+.o-header--large {
+
+    &:only-child .o-header-bottom {
+        display: none;
+    }
+
+    .o-header-img {
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 80px;
+        min-height: 580px;
+
+        .content-width {
+            position: static;
+            padding-bottom: 80px;
+            //text-shadow: 0px 0px 8px rgba(255,255,255,0.8);
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: -150%;
+                left: -10%;
+                width: 65%;
+                height: 400%;
+                background-color: rgba(255,255,255,.6);
+                border-radius: 50%;
+
+                @media all and (max-width: $screen-xs-max) {
+                    width: 100%;
+                }
+
+                @media all and (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+                    width: 90%;
+                }
+
+                @media all and (min-width: $screen-md) and (max-width: $screen-md-max) {
+                    width: 80%;
+                }
+                /*Enlarge Animation*/
+                /*Start state*/
+                opacity: 0;
+                -webkit-transform: scale(0.4);
+                -moz-transform: scale(0.4);
+                -ms-transform: scale(0.4);
+                -o-transform: scale(0.4);
+                /*Animation settings*/
+                -webkit-animation-name: enlarge-left;
+                -moz-animation-name: enlarge-left;
+                -o-animation-name: enlarge-left;
+                animation-name: enlarge-left;
+                -webkit-animation-duration: 0.5s;
+                -moz-animation-duration: 0.5s;
+                -o-animation-duration: 0.5s;
+                animation-duration: 0.5s;
+                -webkit-animation-timing-function: ease-in-out;
+                -moz-animation-timing-function: ease-in-out;
+                -o-animation-timing-function: ease-in-out;
+                animation-timing-function: ease-in-out;
+                -webkit-animation-fill-mode: forwards;
+                -moz-animation-fill-mode: forwards;
+                -o-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+                -webkit-transform-origin: left;
+                -moz-transform-origin: left;
+                -ms-transform-origin: left;
+                -o-transform-origin: left;
+                transform-origin: left;
+                -webkit-animation-delay: ($animation-preload-delay + 1.2s);
+                -moz-animation-delay: ($animation-preload-delay + 1.2s);
+                -o-animation-delay: ($animation-preload-delay + 1.2s);
+                animation-delay: ($animation-preload-delay + 1.2s);
+                /* /Enlarge Animation*/
+            }
+        }
+
+        .bg-circle-preload-toggle {
+            &:before {
+                -webkit-animation-delay: ($animation-preload-delay + .2s);
+                -moz-animation-delay: ($animation-preload-delay + .2s);
+                -o-animation-delay: ($animation-preload-delay + .2s);
+                animation-delay: ($animation-preload-delay + .2s);
+            }
+        }
+    }
+
+    h1 {
+        margin-bottom: .7em;
+    }
+
+    .pre-title {
+        @media all and (max-width: $screen-xs-max) {
+            display: none;
+        }
+    }
+}

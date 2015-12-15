@@ -1,0 +1,65 @@
+// @import "compass/utilities/sprites/base";
+
+// // General Sprite Defaults
+// // You can override them before you import this file.
+// $glyph-sprite-base-class: ".icon" !default;
+// $glyph-sprite-dimensions: true !default;
+// $glyph-position: 0% !default;
+// $glyph-layout: smart;
+// $glyph-spacing: 5px !default;
+// $glyph-repeat: no-repeat !default;
+
+// $glyph-sprites: sprite-map("icons/glyph/*.png",
+//   $position: $glyph-position,
+//   $spacing: $glyph-spacing,
+//   $repeat: $glyph-repeat,
+//   $layout: $glyph-layout,
+//   $readonly-spacing: 10px);
+
+// // All sprites should extend this class
+// // The glyph-sprite mixin will do so for you.
+// #{$glyph-sprite-base-class} {
+//   background: $glyph-sprites no-repeat;
+// }
+
+// // Use this to set the dimensions of an element
+// // based on the size of the original image.
+// @mixin glyph-sprite-dimensions($name) {
+//   @include sprite-dimensions($glyph-sprites, $name)
+// }
+
+// // Move the background position to display the sprite.
+// @mixin glyph-sprite-position($name, $offset-x: 0, $offset-y: 0) {
+//   @include sprite-position($glyph-sprites, $name, $offset-x, $offset-y)
+// }
+
+// // Extends the sprite base class and set the background position for the desired sprite.
+// // It will also apply the image dimensions if $dimensions is true.
+// @mixin glyph-sprite($name, $dimensions: $glyph-sprite-dimensions, $offset-x: 0, $offset-y: 0,$center-vertical: false, $center-horizontal: false) {
+//   $sprite-image: sprite-file($glyph-sprites, $name);
+//   @extend #{$glyph-sprite-base-class};
+//   @include sprite($glyph-sprites, $name, $dimensions, $offset-x, $offset-y);
+//   @if $center-vertical == true {
+//     $sprite-height: image-height($sprite-image);
+//     content: "";
+//     position: absolute;
+//     top: 50%;
+//     margin-top: $sprite-height / -2;
+//   }
+//   @if $center-horizontal == true {
+//     $sprite-width: image-width($sprite-image);
+//     content: "";
+//     position: absolute;
+//     left: 50%;
+//     margin-left: $sprite-width / -2;
+//   }
+// }
+
+// @mixin glyph-sprites($sprite-names, $dimensions: $glyph-sprite-dimensions, $prefix: sprite-map-name($glyph-sprites)) {
+//   @include sprites($glyph-sprites, $sprite-names, $glyph-sprite-base-class, $dimensions, $prefix)
+// }
+
+// // Generates a class for each sprited image.
+// @mixin all-glyph-sprites($dimensions: $glyph-sprite-dimensions, $prefix: sprite-map-name($glyph-sprites)) {
+//   @include glyph-sprites($dimensions, $prefix);
+// }

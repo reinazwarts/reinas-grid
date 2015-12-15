@@ -1,0 +1,57 @@
+body.debug {
+
+    .row {
+	    background-color: rgba(0, 100, 255, 0.1);
+        outline: dashed 1px rgba(0, 100, 255, 0.5);
+
+        &.u-gutter-small > [class*=col-]:before {
+            left: ($gutter-sm/2);
+        }
+
+        &.u-gutter-small > [class*=col-]:after {
+            right: ($gutter-sm/2);
+        }
+    }
+
+    [class*=col-] {
+	    &:not([class*=u-bgc-]) {
+            background-color: rgba(255, 100, 255, 0.1);
+	    }
+        outline: dashed 1px rgba(255, 100, 255, 0.5);
+        position: relative;
+        &:not(.u-no-gutter):before,
+        &:not(.u-no-gutter):after {
+            content: '';
+            position: absolute;
+            left: ($gutter/2);
+            top: 0;
+            width: 1px;
+            height: 100%;
+            border-left: dashed 1px rgba(255, 100, 255, 0.5);
+        }
+        &:not(.u-no-gutter):after {
+            left: auto;
+            right: ($gutter/2);
+        }
+    }
+
+    .content-width {
+        border-left: dashed 1px rgba(0, 255, 0, 0.5);
+        border-right: dashed 1px rgba(0, 255, 0, 0.5);
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            left: ($gutter/2);
+            top: 0;
+            width: 1px;
+            height: 100%;
+            border-left: dashed 1px rgba(0, 255, 0, 0.5);
+        }
+        &:after {
+            left: auto;
+            right: ($gutter/2);
+        }
+    }
+
+}

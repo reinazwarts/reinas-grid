@@ -1,0 +1,94 @@
+.o-footer-nav {
+    background-color: $color-content-bg;
+    height: 90px;
+
+    .o-logo {
+        width: 177px;
+        padding-top: 30px;
+        float: left;
+
+        @media all and (max-width: $screen-xs-max) {
+            width: 115px;
+        }
+    }
+
+    .o-footer-nav-list {
+        margin-top: 15px;
+        float: right;
+
+        li {
+            position: relative;
+            display: inline-block;
+            z-index: 0;
+            padding: 0;
+
+            a {
+                font-size: 1.4rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                display: block;
+                padding: 20px 20px 0;
+                z-index: 1;
+                -moz-transition: color .2s ease-in-out;
+                -o-transition: color .2s ease-in-out;
+                -webkit-transition: color .2s ease-in-out;
+                transition: color .2s ease-in-out;
+            }
+        }
+    }
+
+    .o-footer-social-list {
+        display: block;
+        float: right;
+
+        li {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            margin: 25px 0 0 10px;
+            @media all and (max-width: $screen-xs-max) {
+                -moz-transform: scale(.7);
+                -ms-transform: scale(.7);
+                -o-transform: scale(.7);
+                -webkit-transform: scale(.7);
+                transform: scale(.7);
+                margin-left: -7px;
+            }
+            a {
+                
+                img {
+                    -moz-transition: opacity .2s ease-in-out;
+                    -o-transition: opacity .2s ease-in-out;
+                    -webkit-transition: opacity .2s ease-in-out;
+                    transition: opacity .2s ease-in-out;
+
+                    &:hover {
+                        opacity: .8;
+                    }
+
+                    
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: $screen-lg) {
+    .o-footer-nav {
+        height: auto;
+        padding-bottom: 30px;
+
+        .o-footer-nav-list {
+            float: none;
+            clear: both;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+
+            li a {
+                padding: 20px 10px 0;
+            }
+        }
+    }
+}

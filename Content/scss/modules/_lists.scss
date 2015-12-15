@@ -1,0 +1,36 @@
+// functional list (for navigation or other non-content components)
+// TODO: naming! list-unstyled as bootstrap
+.u-flist ul, 
+.u-flist ol {
+    padding: 0;
+    list-style: none;
+}
+
+// horizontal list
+.u-hlist ul {
+    &:after {
+		//clearfix
+		content: "";
+		display: table;
+		clear: both;
+	}
+    li {
+        float: left;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    ul li {
+        float: none;
+    }
+}
+
+// horizontal display inline-block list
+.u-hdillist li {
+    display: inline-block;
+    padding-top: 0;
+    padding-bottom: 0;
+    vertical-align: top;
+    ul li {
+        display: list-item;
+    }
+}
