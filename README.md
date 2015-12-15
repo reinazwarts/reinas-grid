@@ -10,5 +10,6 @@ html/css grid
 - Vertical gutter option (equal to horizontal gutter)
 - Gutter sizes expandable (gutter standard, guuter small etc.)
 - Push and pull options
-- Centered aligned columns option
+- Horizontal centered aligned columns option (with commensurate layout)
+- Vertical centered columns per row option
 - Flexible width option (depending on amount of items in row)
