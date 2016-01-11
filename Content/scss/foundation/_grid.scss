@@ -108,10 +108,13 @@ $screensizes: (
     (xs,    0,          479px),
     (sm,    480px,      599px),
     (md,    600px,      799px),
-    (lg,    800px,      null),
+    (lg,    800px,      3000px),
 );
 
 .u-auto-clear {
+    .col-12:nth-child(8n+1),
+    .col-14:nth-child(7n+1),
+    .col-16:nth-child(6n+1),
     .col-20:nth-child(5n+1),
     .col-25:nth-child(4n+1),
     .col-33:nth-child(3n+1),
@@ -121,7 +124,6 @@ $screensizes: (
 }
 
 @each $screen-name, $min-width, $max-width in $screensizes {
-    
 	@media all and (min-width: $min-width) {
 		@each $col-name, $col-width in $col-sizes {      
 			.col-#{$col-name} {
@@ -135,9 +137,11 @@ $screensizes: (
 			}         
 		}
 	}
-
-    @mixin equal {
+    @media all and (min-width: $min-width) and (max-width: $max-width) {
         .u-auto-clear {
+            .col-#{$screen-name}-12:nth-child(8n+1),
+            .col-#{$screen-name}-14:nth-child(7n+1),
+            .col-#{$screen-name}-16:nth-child(6n+1),
             .col-#{$screen-name}-20:nth-child(5n+1),
             .col-#{$screen-name}-25:nth-child(4n+1),
             .col-#{$screen-name}-33:nth-child(3n+1),
@@ -146,33 +150,60 @@ $screensizes: (
             }
         }
     }
-    @if $screen-name == lg {
-        @media all and (min-width: $min-width) {
-            @include equal;
-        }
-    } @else {
-        @media all and (min-width: $min-width) and (max-width: $max-width) {
-            @include equal;
-        }
-    }
-
 }
 
 
-// horizontally centered grid
-@media all and (min-width: 480px) {
-    .u-centered {
-        text-align: center;
-        font-size: 0;
-        [class*=col-] {
-            font-size: 1.6rem;
-            float: none;
-	        display: inline-block;
-	        vertical-align: top;
-            text-align: left;
+
+.u-centered {
+    text-align: center;
+    font-size: 0;
+    [class*=col-] {
+        font-size: 1.6rem;
+        float: none;
+	    display: inline-block;
+	    vertical-align: top;
+        text-align: left;
+    }
+
+    &:not(.u-centered-flat) {
+        @each $screen-name, $min-width, $max-width in $screensizes {
+            @media all and (min-width: $min-width) and (max-width: $max-width) {
+                @each $col-name, $col-width in $col-sizes {
+                    @if $col-name == '20' {                        
+                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(6) ~ [class*=col-]:nth-child(3) {
+                            margin-right: 20%;
+                        }
+                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(6) {
+                            margin-right: 0;
+                            margin-left: 20%;
+                        }
+                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(7),
+                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(7) ~ [class*=col-],
+                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(8),
+                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(8) ~ [class*=col-] {
+                            width: 20.1%;
+                        }
+                    }
+                    @if $col-name == '25' {
+                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(5),
+                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(5) ~ [class*=col-],
+                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(6),
+                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(6) ~ [class*=col-] {
+                            width: 25.1%;
+                        }
+                    }
+                    @if $col-name == '33' {
+                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(4),
+                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(4) ~ [class*=col-] {
+                            width: 33.4%;
+                        }
+                    }
+                }
+            }
         }
     }
 }
+
 
 
 

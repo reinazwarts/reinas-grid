@@ -1,8 +1,33 @@
 body.debug {
 
+    position: relative;
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        position: fixed;
+        right: 0;
+        top: 50%;
+        font-size: 16px;
+        width: 40px;
+        padding: 0 5px;
+    }
+    &:before {
+        content: 'row';
+        margin-top: 0;
+        height: 50px;
+        background-color: rgba(0, 100, 255, 0.1);
+    }
+    &:after {
+        content: 'col';
+        margin-top: 25px;
+        background-color: rgba(255, 100, 255, 0.1);
+        outline: dashed 1px rgba(255, 100, 255, 0.3);
+    }
+
     .row {
 	    background-color: rgba(0, 100, 255, 0.1);
-        outline: dashed 1px rgba(0, 100, 255, 0.5);
+        //outline: dashed 1px rgba(0, 100, 255, 0.3);
 
         &.u-gutter-small > [class*=col-]:before {
             left: ($gutter-sm/2);
@@ -17,7 +42,7 @@ body.debug {
 	    &:not([class*=u-bgc-]) {
             background-color: rgba(255, 100, 255, 0.1);
 	    }
-        outline: dashed 1px rgba(255, 100, 255, 0.5);
+        outline: dashed 1px rgba(255, 100, 255, 0.3);
         position: relative;
         &:not(.u-no-gutter):before,
         &:not(.u-no-gutter):after {
@@ -27,7 +52,7 @@ body.debug {
             top: 0;
             width: 1px;
             height: 100%;
-            border-left: dashed 1px rgba(255, 100, 255, 0.5);
+            border-left: dashed 1px rgba(255, 100, 255, 0.3);
         }
         &:not(.u-no-gutter):after {
             left: auto;
@@ -36,8 +61,8 @@ body.debug {
     }
 
     .content-width {
-        border-left: dashed 1px rgba(0, 255, 0, 0.5);
-        border-right: dashed 1px rgba(0, 255, 0, 0.5);
+        border-left: dashed 1px rgba(0, 0, 255, 0.3);
+        border-right: dashed 1px rgba(0, 0, 255, 0.3);
         &:before,
         &:after {
             content: '';
@@ -46,12 +71,14 @@ body.debug {
             top: 0;
             width: 1px;
             height: 100%;
-            border-left: dashed 1px rgba(0, 255, 0, 0.5);
+            border-left: dashed 1px rgba(0, 0, 255, 0.3);
         }
         &:after {
             left: auto;
             right: ($gutter/2);
         }
     }
-
+    code {
+        color: orangered;
+    }
 }
