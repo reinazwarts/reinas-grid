@@ -1,0 +1,31 @@
+{
+  "name": "Reinas-grid",
+  "homepage": "https://github.com/reinazwarts/reinas-grid",
+  "authors": [
+    "Reina Zwarts"
+  ],
+  "description": "Best grid in the world",
+  "main": "Content/scss/app.scss",
+  "keywords": [
+    "test"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "46b3b8d",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "acdd91f9081e8f1893fd57cc227cafcb8576d8b8"
+  },
+  "_source": "git://github.com/reinazwarts/reinas-grid.git",
+  "_target": "*",
+  "_originalSource": "git://github.com/reinazwarts/reinas-grid.git",
+  "_direct": true
+}

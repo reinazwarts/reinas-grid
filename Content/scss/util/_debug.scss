@@ -11,23 +11,25 @@ body.debug {
         font-size: 16px;
         width: 40px;
         padding: 0 5px;
+        z-index: 5000;
     }
     &:before {
         content: 'row';
         margin-top: 0;
         height: 50px;
-        background-color: rgba(0, 100, 255, 0.1);
+        background-color: #E6F0FF;
+        outline: dashed 1px rgba(0, 100, 255, 0.2);
     }
     &:after {
         content: 'col';
         margin-top: 25px;
-        background-color: rgba(255, 100, 255, 0.1);
+        background-color: #E9E3FF;
         outline: dashed 1px rgba(255, 100, 255, 0.3);
     }
 
     .row {
 	    background-color: rgba(0, 100, 255, 0.1);
-        //outline: dashed 1px rgba(0, 100, 255, 0.3);
+        outline: dashed 1px rgba(0, 100, 255, 0.2);
 
         &.u-gutter-small > [class*=col-]:before {
             left: ($gutter-sm/2);
@@ -61,8 +63,8 @@ body.debug {
     }
 
     .content-width {
-        border-left: dashed 1px rgba(0, 0, 255, 0.3);
-        border-right: dashed 1px rgba(0, 0, 255, 0.3);
+        border-left: dashed 1px rgba(0, 100, 255, 0.3);
+        border-right: dashed 1px rgba(0, 100, 255, 0.3);
         &:before,
         &:after {
             content: '';
@@ -71,7 +73,7 @@ body.debug {
             top: 0;
             width: 1px;
             height: 100%;
-            border-left: dashed 1px rgba(0, 0, 255, 0.3);
+            border-left: dashed 1px rgba(0, 100, 255, 0.3);
         }
         &:after {
             left: auto;
