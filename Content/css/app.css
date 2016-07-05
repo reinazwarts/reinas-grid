@@ -1375,12 +1375,11 @@ input[type=submit],
   text-decoration: none;
   cursor: pointer;
   color: #18489c;
-  border: 3px solid #18489c;
+  border: 1px solid #18489c;
   font-size: 1.6rem;
   font-weight: 600;
   position: relative;
   text-align: center;
-  text-transform: uppercase;
   margin: 10px 0;
 }
 
@@ -1578,6 +1577,12 @@ body.debug .content-width:after {
 
 body.debug code {
   color: orangered;
+}
+
+.js-toggle-guidelines {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 /*# sourceMappingURL=app.css.map */

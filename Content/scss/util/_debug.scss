@@ -32,11 +32,11 @@ body.debug {
         outline: dashed 1px rgba(0, 100, 255, 0.2);
 
         &.u-gutter-small > [class*=col-]:before {
-            left: ($gutter-sm/2);
+            left: ($grid-gutter-sm/2);
         }
 
         &.u-gutter-small > [class*=col-]:after {
-            right: ($gutter-sm/2);
+            right: ($grid-gutter-sm/2);
         }
     }
 
@@ -50,7 +50,7 @@ body.debug {
         &:not(.u-no-gutter):after {
             content: '';
             position: absolute;
-            left: ($gutter/2);
+            left: ($grid-gutter/2);
             top: 0;
             width: 1px;
             height: 100%;
@@ -58,7 +58,7 @@ body.debug {
         }
         &:not(.u-no-gutter):after {
             left: auto;
-            right: ($gutter/2);
+            right: ($grid-gutter/2);
         }
     }
 
@@ -69,7 +69,7 @@ body.debug {
         &:after {
             content: '';
             position: absolute;
-            left: ($gutter/2);
+            left: ($grid-gutter/2);
             top: 0;
             width: 1px;
             height: 100%;
@@ -77,10 +77,16 @@ body.debug {
         }
         &:after {
             left: auto;
-            right: ($gutter/2);
+            right: ($grid-gutter/2);
         }
     }
     code {
         color: orangered;
     }
+}
+
+.js-toggle-guidelines {
+	position: absolute;
+	top: 0;
+	right: 0;
 }

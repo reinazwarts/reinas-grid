@@ -6,13 +6,12 @@ input[type=submit],
     text-decoration: none;
     cursor: pointer;
     color: $button-color-primary;
-    border: 3px solid $button-color-primary;
+    border: 1px solid $button-color-primary;
     font-size: 1.6rem;
     font-weight: 600;
     position: relative;
     text-align: center;
-    text-transform: uppercase;
-    margin:($gutter / 4) 0;
+    margin:($grid-gutter / 4) 0;
     a {
         color: inherit;
         text-decoration: none;
