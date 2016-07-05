@@ -8,6 +8,625 @@
     <link rel="stylesheet" type="text/css" href="Content/css/app.css" />
 </head>
 <body ontouchstart="" class="debug">
+	<style>
+		.loader {
+			position: relative;
+			width: 80px;
+			height: 80px;
+			overflow: hidden;
+			animation: h 3s infinite;
+		}
+		[class*=loader-bar] {
+			position: absolute;
+			left: 0;
+			bottom: -100%;
+			width: 25%;
+			height: 100%;
+		}
+		.loader-bar1 {
+			background-color: #008FD3;
+			animation: d 3s infinite;
+		}
+		.loader-bar2 {
+			background-color: #96BD0D;
+			left: 25%;
+			animation: e 3s infinite;
+		}
+		.loader-bar3 {
+			background-color: #E2004F;
+			left: 50%;
+			animation: f 3s infinite;
+		}
+		.loader-bar4 {
+			background-color: #F19300;
+			left: 75%;
+			animation: g 3s infinite;
+		}
+		.loader-text {
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+			color: #fff;
+
+		}
+
+		@keyframes grow1 {
+		  0%   { bottom: -80px; }
+		  15%,100% { bottom: 0; }
+		}
+		@keyframes grow2 {
+		  0%,15%   { bottom: -80px; }
+		  30%,100% { bottom: 0; }
+		}
+		@keyframes grow3 {
+		  0%,30%   { bottom: -80px; }
+		  45%,100% { bottom: 0; }
+		}
+		@keyframes grow4 {
+		  0%,45%   { bottom: -80px; }
+		  60%,100% { bottom: 0; }
+		}
+		@keyframes roundturnandshrink {
+		  0%,60%   { border-radius: 0; }
+		  70%,80% { border-radius: 50%; transform: rotate(0deg) scale(1); }
+		  100% { border-radius: 50%; transform: rotate(360deg) scale(0); }
+		}
+
+		/*@keyframes d{0%{bottom:-80px}15%,100%{bottom:0}}
+		@keyframes e{0%,15%{bottom:-80px}30%,100%{bottom:0}}
+		@keyframes f{0%,30%{bottom:-80px}45%,100%{bottom:0}}
+		@keyframes g{0%,45%{bottom:-80px}60%,100%{bottom:0}}
+		@keyframes h{0%,60%{border-radius:0}70%,80%{transform:rotate(0deg) scale(1)}70%,80%,to{border-radius:50%}to{transform:rotate(1turn) scale(0)}}*/
+
+
+	</style>
+	<div class="loader">
+		<div class="loader-bar1"></div>
+		<div class="loader-bar2"></div>
+		<div class="loader-bar3"></div>
+		<div class="loader-bar4"></div>
+		<div class="loader-text">TM</div>
+	</div>
+
+	<style>
+		.svg-icon {
+			width: 1em;
+			height: 1em;
+			vertical-align: middle;
+			fill: currentColor;
+			margin-right: 5px;
+		}
+		.svg-icon-link {
+			color: red;
+		}
+		.svg-icon-link:hover {
+			color: rgba(237, 0, 255, 0.50);
+		}
+		.svg-icon-link2 {
+			color: cornflowerblue;
+		}
+		.svg-icon-link2:hover {
+			color: #a3de40;
+		}
+		.svg-phone {
+			width: 22px;
+			height: 22px;
+		}
+		.svg-mail {
+			width: 23px;
+			height: 18px;
+		}
+	</style>
+	<div class="o-browser-width">
+		<div class="o-content-width container">
+			<h1>SVG icons color adjustment via CSS (yeah!)</h1>
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
+				<defs>
+					<g id="icon-phone" data-width="22" data-height="22">
+						<path d="M5.4,0.1c1.8,0.7,2.9,2.1,4,3.5c1,1.1,0.8,2.7-0.2,3.8c-0.4,0.5-1,0.8-1.4,1.2c1.9,1.9,3.7,3.7,5.6,5.6c0.3-0.3,0.7-0.8,1.1-1.2c1.4-1.3,3.1-1.3,4.4,0c1.1,1.1,2.5,2.1,3,3.7c0.1,0.4,0.2,0.8,0,1.2c-0.4,0.8-1.4,2.1-2.4,2.8c-1.1,0.7-1.9,1-2.9,1.2c-0.6,0.1-1,0.1-1.7,0c-5.7-1.3-9.4-5.2-12.7-9.7c-0.2-0.3-0.4-0.7-0.7-1.1c-0.3-0.5-0.4-1,0.2-1.3c0.5-0.3,0.9,0.1,1.2,0.5c2,3.5,4.8,6.3,8.2,8.4c1.9,1.2,3.9,2,6.1,1.3c1-0.3,1.9-1.1,2.7-1.9c0.7-0.6,0.6-1.5-0.1-2.2c-0.7-0.7-1.3-1.4-2.1-2.1c-0.7-0.7-1.6-0.7-2.3,0c-0.6,0.5-1.1,1.1-1.6,1.7c-0.4,0.5-0.9,0.5-1.3,0c-2.1-2.1-4.2-4.2-6.2-6.3C5.9,9,5.9,8.6,6.3,8.2c0.5-0.5,1.1-1,1.6-1.6c0.9-0.9,0.9-1.7,0-2.5C7.3,3.4,6.7,2.8,6,2.2C5.3,1.5,4.5,1.4,3.8,2.1c-1.5,1.2-2.1,2.7-2,4.6c-0.1,0.4,0,0.9-0.4,1C1,7.8,0.5,7.6,0.2,7.3c-0.3-0.2-0.2-1.2,0-2C0.8,3,1.9,1.1,4.3,0.1C4.7-0.1,5.1,0,5.4,0.1z" />
+					</g>
+					<g id="icon-mail" data-width="23" data-height="18">
+						<path d="M23,0v18H0V4h2v12h19V2H0V0H23z M17,3.8l-5.7,6.4L5.7,3.8L4.6,5l6.7,7.5L18,5L17,3.8z M19.3,13.9l-2.8-3.1l-0.7,0.8l2.8,3.1L19.3,13.9z M3.9,14.7l2.8-3.1L6,10.8l-2.8,3.1L3.9,14.7z" />
+					</g>
+				</defs>
+			</svg>
+
+
+			<a href="#" class="svg-icon-link">
+				<svg class="svg-icon svg-phone" viewBox="0 0 22 22">
+					<use xlink:href="#icon-phone"></use>
+				</svg>tekst
+			</a>
+			<a href="#" class="svg-icon-link2">
+				<svg class="svg-icon svg-mail" viewBox="0 0 22 22">
+					<use xlink:href="#icon-mail"></use>
+				</svg>
+			</a>
+
+
+		</div>
+	</div>
+
+	<style>
+	</style>
+	<div class="o-browser-width">
+		<div class="o-content-width container">
+			<h1>@supports</h1>
+			<pre>
+@supports (-webkit-mask-image: url('/areas/Ontdekken/images/mask.png')) or (mask-image: url('/areas/Ontdekken/images/mask.png')) {
+	-webkit-mask-image: url('/areas/Ontdekken/images/mask.png');
+	mask-image: url('/areas/Ontdekken/images/mask.png');
+	-webkit-mask-position: bottom center;
+	mask-position: bottom center;
+	&:last-child {
+		margin-bottom: -13px;
+	}
+}
+			</pre>
+		</div>
+	</div>
+
+	<style>
+	</style>
+	<div class="o-browser-width">
+		<div class="o-content-width container">
+			<h1>Clip-path</h1>
+			<a href="http://www.html5rocks.com/en/tutorials/masking/adobe/">clip-path</a>
+		</div>
+	</div>
+
+	<style>
+		.boxshadow-demo {
+			box-shadow: 0 0 0 5px black, 0 0 0 10px gold, 0 0 0 20px #00ffff, 0 0 0 35px #ff0000;
+			margin: 35px;
+			padding: 25px;
+			margin-bottom: 70px;
+		}
+	</style>
+	<div class="o-browser-width">
+		<div class="o-content-width container">
+			<h1>Multiple borders</h1>
+			<div class="boxshadow-demo">Lorem ipsum dolor amet sit lortem ipsum. Lorem ipsum dolor amet sit lortem ipsum. Lorem ipsum dolor amet sit lortem ipsum. Lorem ipsum dolor amet sit lortem ipsum. </div>
+		</div>
+	</div>
+
+	<style>
+		.backdrop-demo {
+			position: relative;
+		}
+
+		.backdrop-content {
+			position: absolute;
+			top: 25px;
+			left: 25px;
+			width: 60%;
+			height: 80%;
+			border: solid 3px cornflowerblue;
+			-webkit-backdrop-filter: blur(10px);
+			backdrop-filter: blur(10px);
+		}
+	</style>
+	<div class="o-browser-width">
+		<div class="o-content-width container">
+			<h1>Backdrop filter</h1>
+			<div class="backdrop-demo">
+				<img class="" src="aitutaki.jpg">
+				<div class="backdrop-content">
+					Lorem ipsum dolor amet sit lortem ipsum. Lorem ipsum dolor amet sit lortem ipsum. Lorem ipsum dolor amet sit lortem ipsum.
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<style>
+	</style>
+	<div class="o-browser-width">
+		<div class="o-content-width container">
+			<h1>Unit turn</h1>
+			...
+		</div>
+	</div>
+
+	<style>
+	</style>
+	<div class="o-browser-width">
+		<div class="o-content-width container">
+			<h1>Touch action</h1>
+			...
+		</div>
+	</div>
+
+	<style>
+	</style>
+	<div class="o-browser-width">
+		<div class="o-content-width container">
+			<h1>Text-align-last</h1>
+			<p style="text-align-last:center;-webkit-text-align-last:center;width:350px">Lorem ipsum dolor amet sit lortem ipsum. Lorem ipsum dolor amet sit lortem ipsum. Lorem ipsum dolor amet sit lortem ipsum. Lorem ipsum dolor amet sit lortem ipsum. </p>
+		</div>
+	</div>
+
+	<style>
+	</style>
+	<div class="o-browser-width">
+		<div class="o-content-width container">
+			<h1>Pseudo-class</h1>
+			<p>:only-child, :only-of-type</p>
+		</div>
+	</div>
+
+	<style>
+	</style>
+	<div class="o-browser-width">
+		<div class="o-content-width container">
+			<h1>Object-fit</h1>
+			<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit">Object-fit</a>
+		</div>
+	</div>
+
+
+
+
+	<style>
+		[class*=filter-demo] {
+			width: 240px;
+			height: 160px;
+			display: inline-block;
+			vertical-align: text-bottom;
+			position: relative;
+		}
+
+		.filter-demo1 {
+			-webkit-filter: grayscale(50%);
+			filter: grayscale(50%);
+		}
+
+		.filter-demo2 {
+			-webkit-filter: sepia(100%);
+			filter: sepia(100%);
+		}
+
+		.filter-demo3 {
+			-webkit-filter: grayscale(1);
+			filter: grayscale(1);
+		}
+
+		.filter-demo4 {
+			-webkit-filter: hue-rotate(45deg);
+			filter: hue-rotate(45deg);
+		}
+
+		.filter-demo5 {
+			-webkit-filter: invert();
+			filter: invert();
+		}
+
+		.filter-demo6 {
+			-webkit-filter: opacity(.2);
+			filter: opacity(.2);
+		}
+
+		.filter-demo7 {
+			-webkit-filter: brightness(150%);
+			filter: brightness(150%);
+		}
+
+		.filter-demo8 {
+			-webkit-filter: contrast(250%);
+			filter: contrast(250%);
+		}
+
+		.filter-demo9 {
+			-webkit-filter: blur(10px);
+			filter: blur(10px);
+		}
+
+		.filter-demo10 {
+			-webkit-filter: drop-shadow(16px 16px 10px rgba(237, 0, 255, 0.50));
+			filter: drop-shadow(16px 16px 10px rgba(237, 0, 255, 0.50));
+		}
+
+			.filter-demo10:after {
+				content: '';
+				position: absolute;
+				top: 150px;
+				left: 45%;
+				display: block;
+				height: 0;
+				width: 0;
+				border-width: 50px 20px 0 20px;
+				border-style: solid;
+				border-color: #fff transparent transparent transparent;
+			}
+	</style>
+	<div class="o-browser-width">
+		<div class="o-content-width container">
+			<h1>Filter</h1>
+			<img class="filter-demo1" src="aitutaki.jpg" />
+			<img class="filter-demo2" src="aitutaki.jpg" />
+			<img class="filter-demo3" src="aitutaki.jpg" />
+			<img class="filter-demo4" src="aitutaki.jpg" />
+			<img class="filter-demo5" src="aitutaki.jpg" />
+			<img class="filter-demo6" src="aitutaki.jpg" />
+			<img class="filter-demo7" src="aitutaki.jpg" />
+			<img class="filter-demo8" src="aitutaki.jpg" />
+			<img class="filter-demo9" src="aitutaki.jpg" />
+			<div class="filter-demo10"><img class="" src="aitutaki.jpg" /></div>
+		</div>
+	</div>
+
+	<style>
+		.currentcolor-demo {
+			border: dashed 2px currentColor;
+			position: relative;
+			padding: 50px;
+		}
+
+			.currentcolor-demo:after {
+				content: '';
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 400px;
+				height: 100%;
+				border: solid 1px currentColor;
+				background-image: linear-gradient(45deg, currentColor 0, #fff 50%);
+			}
+	</style>
+	<div class="o-browser-width">
+		<div class="o-content-width container">
+			<h1>currentColor</h1>
+			<div class="currentcolor-demo" style="color: cornflowerblue">
+				Lorem ipsum dolor amet sit
+			</div>
+		</div>
+	</div>
+
+	<style>
+		.unset-demo p {
+			color: cornflowerblue;
+		}
+
+			.unset-demo p.unset {
+				color: unset;
+			}
+	</style>
+	<div class="o-browser-width">
+		<div class="o-content-width container">
+			<h1>Unset</h1>
+			<div class="unset-demo">
+				<p>Lorem ipsum dolor amet sit</p>
+				<p class="unset">unset</p>
+			</div>
+		</div>
+	</div>
+
+	<style>
+		[class*=blendmode-demo],
+		[class*=mixblendmode-demo] {
+			background: cornflowerblue url('aitutaki.jpg') no-repeat 0 0;
+			background-size: 240px 160px;
+			width: 240px;
+			height: 160px;
+			display: inline-block;
+			position: relative;
+		}
+
+			[class*=blendmode-demo]:after {
+				content: attr(data-value);
+				position: absolute;
+				right: 0;
+				top: 0;
+				padding: 5px;
+				color: #fff;
+				background-color: cornflowerblue;
+			}
+
+			[class*=mixblendmode-demo]:after {
+				width: 80%;
+				height: 80%;
+			}
+
+		.blendmode-demo1 {
+			background-blend-mode: multiply;
+		}
+
+		.blendmode-demo2 {
+			background-blend-mode: screen;
+		}
+
+		.blendmode-demo3 {
+			background-blend-mode: overlay;
+		}
+
+		.blendmode-demo4 {
+			background-blend-mode: darken;
+		}
+
+		.blendmode-demo5 {
+			background-blend-mode: lighten;
+		}
+
+		.blendmode-demo6 {
+			background-blend-mode: color-dodge;
+		}
+
+		.blendmode-demo7 {
+			background-blend-mode: color-burn;
+		}
+
+		.blendmode-demo8 {
+			background-blend-mode: hard-light;
+		}
+
+		.blendmode-demo9 {
+			background-blend-mode: soft-light;
+		}
+
+		.blendmode-demo10 {
+			background-blend-mode: difference;
+		}
+
+		.blendmode-demo11 {
+			background-blend-mode: exclusion;
+		}
+
+		.blendmode-demo12 {
+			background-blend-mode: hue;
+		}
+
+		.blendmode-demo13 {
+			background-blend-mode: saturation;
+		}
+
+		.blendmode-demo14 {
+			background-blend-mode: color;
+		}
+
+		.blendmode-demo15 {
+			background-blend-mode: luminosity;
+		}
+
+		.mixblendmode-demo1:after {
+			mix-blend-mode: multiply;
+		}
+
+		.mixblendmode-demo2:after {
+			mix-blend-mode: screen;
+		}
+
+		.mixblendmode-demo3:after {
+			mix-blend-mode: overlay;
+		}
+
+		.mixblendmode-demo4:after {
+			mix-blend-mode: darken;
+		}
+
+		.mixblendmode-demo5:after {
+			mix-blend-mode: lighten;
+		}
+
+		.mixblendmode-demo6:after {
+			mix-blend-mode: color-dodge;
+		}
+
+		.mixblendmode-demo7:after {
+			mix-blend-mode: color-burn;
+		}
+
+		.mixblendmode-demo8:after {
+			mix-blend-mode: hard-light;
+		}
+
+		.mixblendmode-demo9:after {
+			mix-blend-mode: soft-light;
+		}
+
+		.mixblendmode-demo10:after {
+			mix-blend-mode: difference;
+		}
+
+		.mixblendmode-demo11:after {
+			mix-blend-mode: exclusion;
+		}
+
+		.mixblendmode-demo12:after {
+			mix-blend-mode: hue;
+		}
+
+		.mixblendmode-demo13:after {
+			mix-blend-mode: saturation;
+		}
+
+		.mixblendmode-demo14:after {
+			mix-blend-mode: color;
+		}
+
+		.mixblendmode-demo15:after {
+			mix-blend-mode: luminosity;
+		}
+	</style>
+	<div class="o-browser-width">
+		<div class="o-content-width container">
+			<h1>Background blend mode, isolate and attr()</h1>
+			<div class="blendmode-demo1" data-value="multiply"></div>
+			<div class="blendmode-demo2" data-value="screen"></div>
+			<div class="blendmode-demo3" data-value="overlay"></div>
+			<div class="blendmode-demo4" data-value="darken"></div>
+			<div class="blendmode-demo5" data-value="lighten"></div>
+			<div class="blendmode-demo6" data-value="color-dodge"></div>
+			<div class="blendmode-demo7" data-value="color-burn"></div>
+			<div class="blendmode-demo8" data-value="hard-light"></div>
+			<div class="blendmode-demo9" data-value="soft-light"></div>
+			<div class="blendmode-demo10" data-value="difference"></div>
+			<div class="blendmode-demo11" data-value="exclusion"></div>
+			<div class="blendmode-demo12" data-value="hue"></div>
+			<div class="blendmode-demo13" data-value="saturation"></div>
+			<div class="blendmode-demo14" data-value="color"></div>
+			<div class="blendmode-demo15" data-value="luminosity"></div>
+			<h1>Mix blend mode</h1>
+			<div class="mixblendmode-demo1" data-value="multiply">
+				<div style="background-color: #bde974;color:#000;position: absolute">tekst</div>
+			</div>
+			<div class="mixblendmode-demo2" data-value="screen"></div>
+			<div class="mixblendmode-demo3" data-value="overlay"></div>
+			<div class="mixblendmode-demo4" data-value="darken"></div>
+			<div class="mixblendmode-demo5" data-value="lighten"></div>
+			<div class="mixblendmode-demo6" data-value="color-dodge"></div>
+			<div class="mixblendmode-demo7" data-value="color-burn"></div>
+			<div class="mixblendmode-demo8" data-value="hard-light"></div>
+			<div class="mixblendmode-demo9" data-value="soft-light"></div>
+			<div class="mixblendmode-demo10" data-value="difference"></div>
+			<div class="mixblendmode-demo11" data-value="exclusion"></div>
+			<div class="mixblendmode-demo12" data-value="hue"></div>
+			<div class="mixblendmode-demo13" data-value="saturation"></div>
+			<div class="mixblendmode-demo14" data-value="color"></div>
+			<div class="mixblendmode-demo15" data-value="luminosity"></div>
+		</div>
+	</div>
+
+	<style>
+		.counter-demo {
+			counter-reset: anyname;
+		}
+
+			.counter-demo li {
+				counter-increment: anyname;
+			}
+
+				.counter-demo li:before {
+					content: counter(anyname);
+					display: inline-block;
+					color: #fff;
+					background-color: cornflowerblue;
+					padding: 2px 5px;
+					margin-right: 5px;
+				}
+	</style>
+	<div class="o-browser-width">
+		<div class="o-content-width container">
+			<h1>Counter</h1>
+			<ul class="counter-demo u-hdillist">
+				<li>Eerste item</li>
+				<li>Tweede item</li>
+				<li>Derde item</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="o-browser-width">
+		<div class="o-content-width container">
+			<h1>Icons</h1>
+			<div style="background-color:lightyellow;padding:20px;width:450px;">
+				<span class="icon--phone u-icon-valigned">icon--phone</span><br />
+				<span class="icon--mail u-icon-valigned">icon--mail</span><br />
+				<span class="icon--contact u-icon-valigned">icon--contact</span><br /><br />
+				<span class="icon--phone u-icon-right u-icon-valigned">icon--phone u-icon-right</span><br /><br />
+				<p>Icoon met tekst erom heen erom heen erom heen erom heen erom heen erom heen <span class="icon--phone u-icon-valigned">icon--phone</span> erom heen erom heen erom heen erom heen erom heen erom heen erom heen.</p>
+			</div>
+		</div>
+	</div>
 
 	<div class="o-browser-width">
 		<div class="o-content-width container">
