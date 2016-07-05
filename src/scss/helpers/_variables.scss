@@ -1,0 +1,19 @@
+$xs-min: 0;
+$sm-min: 400px;
+$md-min: 700px;
+$lg-min: 1000px;
+$xl-min: 1300px;
+$xs-max: ($sm-min - 1);
+$sm-max: ($md-min - 1);
+$md-max: ($lg-min - 1);
+$lg-max: ($xl-min - 1);
+$xl-max: 5000px;
+
+$screensizes: (
+    // name, min-width, max-width
+    (xs,    $xs-min,    $xs-max),
+    (sm,    $sm-min,    $sm-max),
+    (md,    $md-min,    $md-max),
+    (lg,    $lg-min,    $lg-max),
+    (xl,    $xl-min,    $xl-max),
+);

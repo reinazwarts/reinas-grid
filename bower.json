@@ -1,22 +1,17 @@
 {
-  "name": "Reinas-grid",
-  "version": "0.0.2",
-  "homepage": "https://github.com/reinazwarts/reinas-grid",
-  "authors": [
-    "Reina Zwarts"
-  ],
-  "description": "Best grid in the world",
-  "main": "Content/scss/foundation/_grid.scss",
-  "keywords": [
-    "grid"
-  ],
-  "license": "MIT",
-  "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ]
+	"name": "Reinas-grid",
+	"version": "0.0.2",
+	"homepage": "https://github.com/reinazwarts/reinas-grid",
+	"authors": [ "Reina Zwarts" ],
+	"description": "Best grid in the world",
+	"main": "src/scss/foundation/_grid.scss",
+	"keywords": [ "grid" ],
+	"license": "MIT",
+	"private": true,
+	"ignore": [ "**/.*", "node_modules", "bower_components" ],
+	"dependencies": {
+		"jquery": "jquery#2.1.4",
+		"matchHeight": "matchheight#^0.7.0",
+		"js-cookie": "^2.1.0"
+	}
 }

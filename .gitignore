@@ -1,3 +1,40 @@
+# Project specific files and folders #
+######################################
+.sass-cache/
 node_modules/
-.vs/
+bower_components/
+src/libs/
+dist/
+*.sublime-project
+*.sublime-workspace
 *.sln
+.vs/
+applicationhost.config
+
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
