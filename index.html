@@ -7,66 +7,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="dist/css/app.css" />
 </head>
-<body ontouchstart="" class="debug">
+<body ontouchstart="" class="debug u-pt-medium u-pb-medium">
 
 	<button class="js-toggle-guidelines">toggle guidelines</button>
 
 	<div class="o-browser-width">
-		<div class="o-content-width container">
+		<div class="o-content-width u-mb-default">
 			<h1>Reina's grid</h1>
 			<p>uitleg</p>
+			TODO INDEX
 			<hr />
-			<h2>Standard non-responsive grid</h2>
+			
+		</div>
+	</div>
+
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
+			<h2>Basic responsive grid</h2>
 			<div class="row">
+
+				<div class="col-xs-100 col-md-50 col-lg-25">
+					col-xs-100 col-md-50 col-lg-25 
+				</div>
+				<div class="col-xs-100 col-md-50 col-lg-25">
+					col-xs-100 col-md-50 col-lg-25
+				</div>
+				<div class="col-xs-100 col-md-50 col-lg-25">
+					col-xs-100 col-md-50 col-lg-25
+				</div>
+				<div class="col-xs-100 col-md-50 col-lg-25">
+					col-xs-100 col-md-50 col-lg-25
+				</div>
+				<div class="col-xs-100 col-md-50 col-lg-25">
+					col-xs-100 col-md-50 col-lg-25
+				</div>
+				<div class="col-xs-100 col-md-50 col-lg-25">
+					col-xs-100 col-md-50 col-lg-25
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
+			<h2>Automatic clearing equal width columns (add <code>.u-auto-clear</code> to <code>.row</code>)</h2>
+			<div class="row u-mb-default u-auto-clear">
 
 				<div class="col-25">col-25</div>
-				<div class="col-75">col-75</div>
+				<div class="col-25">col-25 more and more text more and more text more and more text more and more text more and more text </div>
+				<div class="col-25">col-25</div>
+				<div class="col-25">col-25</div>
+				<div class="col-25">col-25</div>
+				<div class="col-25">col-25</div>
 
 			</div>
-			<div class="row u-auto-clear">
+			<div class="row u-mb-default u-auto-clear">
 
+				<div class="col-33">col-33</div>
+				<div class="col-33">col-33 more and more text more and more text more and more text more and more text more and more text</div>
 				<div class="col-33">col-33</div>
 				<div class="col-33">col-33</div>
 				<div class="col-33">col-33</div>
-
-			</div>
-			<div class="row">
-
-				<div class="col-20">col-20</div>
-				<div class="col-50">col-50</div>
-				<div class="col-30">col-30</div>
 
 			</div>
 		</div>
 	</div>
 
 	<div class="o-browser-width">
-		<div class="o-content-width container">
-			<h2>Automatic clearing equal width columns (add <code>.u-auto-clear</code> to <code>.row)</code></h2>
-			<div class="row container u-auto-clear">
-
-				<div class="col-25">col-25</div>
-				<div class="col-25">col-25 langere tekst langere tekst langere tekst </div>
-				<div class="col-25">col-25</div>
-				<div class="col-25">col-25</div>
-				<div class="col-25">col-25</div>
-				<div class="col-25">col-25</div>
-
-			</div>
-			<div class="row container u-auto-clear">
-
-				<div class="col-33">col-33</div>
-				<div class="col-33">col-33 langere tekst langere tekst langere tekst langere tekst langere tekst langere tekst langere tekst</div>
-				<div class="col-33">col-33</div>
-				<div class="col-33">col-33</div>
-				<div class="col-33">col-33</div>
-
-			</div>
-		</div>
-	</div>
-
-	<div class="o-browser-width">
-		<div class="o-content-width container">
+		<div class="o-content-width u-mb-default">
 			<h2>Example standard grid</h2>
 
 			<div class="row u-auto-clear">
@@ -92,37 +102,10 @@
 		</div>
 	</div>
 
-	<div class="o-browser-width">
-		<div class="o-content-width container">
-			<h2>Responsive</h2>
-			<div class="row u-auto-clear">
-
-				<div class="col-xs-100 col-md-50 col-lg-25">
-					col-xs-100 col-md-50 col-lg-25 langere tekst langere tekst langere tekst
-				</div>
-				<div class="col-xs-100 col-md-50 col-lg-25">
-					col-xs-100 col-md-50 col-lg-25
-				</div>
-				<div class="col-xs-100 col-md-50 col-lg-25">
-					col-xs-100 col-md-50 col-lg-25
-				</div>
-				<div class="col-xs-100 col-md-50 col-lg-25">
-					col-xs-100 col-md-50 col-lg-25
-				</div>
-				<div class="col-xs-100 col-md-50 col-lg-25">
-					col-xs-100 col-md-50 col-lg-25
-				</div>
-				<div class="col-xs-100 col-md-50 col-lg-25">
-					col-xs-100 col-md-50 col-lg-25
-				</div>
-
-			</div>
-
-		</div>
-	</div>
+	
 
 	<div class="o-browser-width">
-		<div class="o-content-width container">
+		<div class="o-content-width u-mb-default">
 			<h2>Flexible amount of items and justifing (add <code>.u-justified</code> to <code>.row</code>)</h2>
 			<p>Don't combine u-auto-clear and u-justified. Auto clearing is embedded in justified option.</p>
 			<p><strong style="color:red">TODO</strong>: maximal amount of items per row -> setting ( now this is 4 (25%) )</p>
@@ -272,7 +255,7 @@
 
 	<!--Horizontally aligned centered-->
 	<div class="o-browser-width">
-		<div class="o-content-width container">
+		<div class="o-content-width u-mb-default">
 			<h2>Horizontally aligned centered (add <code>.u-centered</code> to <code>.row</code>)</h2>
 			<p>Items are automatically beautified in thier composition, i.e. 4/1 becomes 3/2. To disable this add <code>.u-centered-flat</code> to <code>.row</code></p>
 
@@ -937,7 +920,7 @@
 
 	<!--Offset-->
 	<div class="o-browser-width">
-		<div class="o-content-width container">
+		<div class="o-content-width u-mb-default">
 			<h2>Offset</h2>
 			<div class="row u-auto-clear">
 
@@ -963,7 +946,7 @@
 
 	<!--Wrapping-->
 	<div class="o-browser-width">
-		<div class="o-content-width container">
+		<div class="o-content-width u-mb-default">
 			<h2>Wrapping</h2>
 			<div class="row">
 
@@ -984,7 +967,7 @@
 
 	<!--Vertical gutter-->
 	<div class="o-browser-width">
-		<div class="o-content-width container">
+		<div class="o-content-width u-mb-default">
 			<h2>Vertical gutter (add <code>.u-vertical-gutter</code>) to <code>.row</code></h2>
 			<div class="row u-vertical-gutter">
 
@@ -1003,22 +986,22 @@
 
 	<!--Margin bottom-->
 	<div class="o-browser-width">
-		<div class="o-content-width container">
-			<h2>Margin bottom (add <code>.container</code> to <code>.row</code>)</h2>
-			<div class="row container">
+		<div class="o-content-width u-mb-default">
+			<h2>Margin bottom (add <code>.u-mb-default</code> to <code>.row</code>)</h2>
+			<div class="row u-mb-default">
 
 				<div class="col-25">col 25%</div>
 				<div class="col-75">col 75%</div>
 
 			</div>
-			<div class="row container u-auto-clear">
+			<div class="row u-mb-default u-auto-clear">
 
 				<div class="col-33">col 33%</div>
 				<div class="col-33">col 33%</div>
 				<div class="col-33">col 33%</div>
 
 			</div>
-			<div class="row container">
+			<div class="row u-mb-default">
 
 				<div class="col-20">col 20%</div>
 				<div class="col-50">col 50%</div>
@@ -1030,7 +1013,7 @@
 
 	<!--No gutter-->
 	<div class="o-browser-width">
-		<div class="o-content-width container">
+		<div class="o-content-width u-mb-default">
 			<h2>No gutter (add <code>.u-no-gutter</code> to <code>.col</code>)</h2>
 			<div class="row">
 
@@ -1044,7 +1027,7 @@
 
 	<!--Example no gutter-->
 	<div class="o-browser-width">
-		<div class="o-content-width container">
+		<div class="o-content-width u-mb-default">
 			<h2>Example no gutter</h2>
 
 			<div class="row">
@@ -1070,7 +1053,7 @@
 
 	<!--Small gutter-->
 	<div class="o-browser-width">
-		<div class="o-content-width container">
+		<div class="o-content-width u-mb-default">
 			<h2>Small gutter (add <code>.u-gutter-small</code> to <code>.row</code>)</h2>
 			<div class="row u-gutter-small">
 
@@ -1084,7 +1067,7 @@
 
 	<!--Vertical small gutter-->
 	<div class="o-browser-width">
-		<div class="o-content-width container">
+		<div class="o-content-width u-mb-default">
 			<h2>Vertical small gutter (add <code>.u-vertical-gutter</code> and <code>.u-gutter-small</code>) to <code>.row</code></h2>
 			<div class="row u-vertical-gutter u-gutter-small">
 
@@ -1103,7 +1086,7 @@
 
 	<!--Example of use small gutter-->
 	<div class="o-browser-width">
-		<div class="o-content-width container">
+		<div class="o-content-width u-mb-default">
 			<h2>Example of use small gutter</h2>
 			<div class="row u-gutter-small">
 
@@ -1159,9 +1142,9 @@
 
 	<!--Nested grid-->
 	<div class="o-browser-width">
-		<div class="o-content-width container">
+		<div class="o-content-width u-mb-default">
 			<h2>Nested grid</h2>
-			<div class="row container">
+			<div class="row u-mb-default">
 
 				<div class="col-25">col 25%</div>
 				<div class="col-75">
@@ -1190,15 +1173,15 @@
 
 	<!--Push pull-->
 	<div class="o-browser-width">
-		<div class="o-content-width container">
+		<div class="o-content-width u-mb-default">
 			<h2>Push pull</h2>
-			<div class="row container">
+			<div class="row u-mb-default">
 
 				<div class="col-30"><img src="http://lorempixel.com/500/300/food"></div>
 				<div class="col-70">col 70%</div>
 
 			</div>
-			<div class="row container">
+			<div class="row u-mb-default">
 
 				<div class="col-30 u-push-right"><img src="http://lorempixel.com/500/300/food"></div>
 				<div class="col-70">col 70%</div>
@@ -1213,7 +1196,7 @@
 		<div class="o-content-width">
 			<h2>Combining small and standard gutter</h2>
 
-			<div class="row u-gutter-small container">
+			<div class="row u-gutter-small u-mb-default">
 
 				<div class="col-25">col 25%</div>
 				<div class="col-75">
@@ -1242,7 +1225,7 @@
 	<div class="o-browser-width">
 		<div class="o-content-width">
 
-			<div class="row container">
+			<div class="row u-mb-default">
 
 				<div class="col-25">col 25%</div>
 				<div class="col-75">
