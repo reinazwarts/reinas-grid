@@ -5,66 +5,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Reina's grid</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="Content/css/app.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/app.css" />
 </head>
-<body ontouchstart="" class="debug">
+<body ontouchstart="" class="debug u-pt-medium u-pb-medium">
 
-	<div class="browser-width">
-		<div class="content-width container">
+	<button class="js-toggle-guidelines">toggle guidelines</button>
+
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
 			<h1>Reina's grid</h1>
 			<p>uitleg</p>
+			TODO INDEX
 			<hr />
-			<h2>Standard non-responsive grid</h2>
+
+		</div>
+	</div>
+
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
+			<h2>Basic responsive grid</h2>
+			
 			<div class="row">
+
+				<div class="col-xs-100 col-md-50 col-lg-25">
+					col-xs-100 col-md-50 col-lg-25
+				</div>
+				<div class="col-xs-100 col-md-50 col-lg-25">
+					col-xs-100 col-md-50 col-lg-25
+				</div>
+				<div class="col-xs-100 col-md-50 col-lg-25">
+					col-xs-100 col-md-50 col-lg-25
+				</div>
+				<div class="col-xs-100 col-md-50 col-lg-25">
+					col-xs-100 col-md-50 col-lg-25
+				</div>
+				<div class="col-xs-100 col-md-50 col-lg-25">
+					col-xs-100 col-md-50 col-lg-25
+				</div>
+				<div class="col-xs-100 col-md-50 col-lg-25">
+					col-xs-100 col-md-50 col-lg-25
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
+			<h2>Automatic clearing equal width columns (add <code>.u-auto-clear</code> to <code>.row</code>)</h2>
+			<div class="row u-mb-default u-auto-clear">
 
 				<div class="col-25">col-25</div>
-				<div class="col-75">col-75</div>
+				<div class="col-25">col-25 more and more text more and more text more and more text more and more text more and more text </div>
+				<div class="col-25">col-25</div>
+				<div class="col-25">col-25</div>
+				<div class="col-25">col-25</div>
+				<div class="col-25">col-25</div>
 
 			</div>
-			<div class="row u-auto-clear">
+			<div class="row u-mb-default u-auto-clear">
 
+				<div class="col-33">col-33</div>
+				<div class="col-33">col-33 more and more text more and more text more and more text more and more text more and more text</div>
 				<div class="col-33">col-33</div>
 				<div class="col-33">col-33</div>
 				<div class="col-33">col-33</div>
-
-			</div>
-			<div class="row">
-
-				<div class="col-20">col-20</div>
-				<div class="col-50">col-50</div>
-				<div class="col-30">col-30</div>
 
 			</div>
 		</div>
 	</div>
 
-	<div class="browser-width">
-		<div class="content-width container">
-			<h2>Automatic clearing equal width columns (add <code>.u-auto-clear</code> to <code>.row)</code></h2>
-			<div class="row container u-auto-clear">
-
-				<div class="col-25">col-25</div>
-				<div class="col-25">col-25 langere tekst langere tekst langere tekst </div>
-				<div class="col-25">col-25</div>
-				<div class="col-25">col-25</div>
-				<div class="col-25">col-25</div>
-				<div class="col-25">col-25</div>
-
-			</div>
-			<div class="row container u-auto-clear">
-
-				<div class="col-33">col-33</div>
-				<div class="col-33">col-33 langere tekst langere tekst langere tekst langere tekst langere tekst langere tekst langere tekst</div>
-				<div class="col-33">col-33</div>
-				<div class="col-33">col-33</div>
-				<div class="col-33">col-33</div>
-
-			</div>
-		</div>
-	</div>
-
-	<div class="browser-width">
-		<div class="content-width container">
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
 			<h2>Example standard grid</h2>
 
 			<div class="row u-auto-clear">
@@ -90,28 +103,136 @@
 		</div>
 	</div>
 
-	<div class="browser-width">
-		<div class="content-width container">
-			<h2>Responsive</h2>
+
+
+	
+
+	<!--Offset-->
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
+			<h2>Offset</h2>
 			<div class="row u-auto-clear">
 
-				<div class="col-xs-100 col-md-50 col-lg-25">
-					col-xs-100 col-md-50 col-lg-25 langere tekst langere tekst langere tekst
+				<div class="col-xs-100 col-md-50 col-lg-25 col-lg-offset-25">
+					col-xs-100<br />
+					col-md-50<br />
+					col-lg-25<br />
+					col-lg-offset-25
 				</div>
-				<div class="col-xs-100 col-md-50 col-lg-25">
-					col-xs-100 col-md-50 col-lg-25
+
+				<div class="col-xs-100 col-md-50 col-lg-25 col-lg-offset-25">
+					col-xs-100<br />
+					col-md-50<br />
+					col-lg-25<br />
+					col-lg-offset-25
 				</div>
-				<div class="col-xs-100 col-md-50 col-lg-25">
-					col-xs-100 col-md-50 col-lg-25
+
+
+			</div>
+
+		</div>
+	</div>
+
+	<!--Wrapping-->
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
+			<h2>Wrapping</h2>
+			<div class="row">
+
+				<div class="col-30">col 30%</div>
+				<div class="col-30">col 30%</div>
+				<div class="col-50">col 50%</div>
+				<div class="col-33">col 33%</div>
+				<div class="col-33">col 33%</div>
+				<div class="col-33">col 33%</div>
+				<div class="col-20">col 20%</div>
+				<div class="col-100">col 100%</div>
+				<div class="col-50">col 50%</div>
+				<div class="col-30">col 30%</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!--Vertical gutter-->
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
+			<h2>Vertical gutter (add <code>.u-vertical-gutter</code>) to <code>.row</code></h2>
+			<div class="row u-vertical-gutter">
+
+				<div class="col-25">col 25%</div>
+				<div class="col-75">col 75%</div>
+				<div class="col-33">col 33%</div>
+				<div class="col-33">col 33%</div>
+				<div class="col-33">col 33%</div>
+				<div class="col-20">col 20%</div>
+				<div class="col-50">col 50%</div>
+				<div class="col-30">col 30%</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!--Margin bottom-->
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
+			<h2>Margin bottom (add <code>.u-mb-default</code> to <code>.row</code>)</h2>
+			<div class="row u-mb-default">
+
+				<div class="col-25">col 25%</div>
+				<div class="col-75">col 75%</div>
+
+			</div>
+			<div class="row u-mb-default u-auto-clear">
+
+				<div class="col-33">col 33%</div>
+				<div class="col-33">col 33%</div>
+				<div class="col-33">col 33%</div>
+
+			</div>
+			<div class="row u-mb-default">
+
+				<div class="col-20">col 20%</div>
+				<div class="col-50">col 50%</div>
+				<div class="col-30">col 30%</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!--No gutter-->
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
+			<h2>No gutter (add <code>.u-no-gutter</code> to <code>.col</code>)</h2>
+			<div class="row">
+
+				<div class="col-20 u-no-gutter">col 20%</div>
+				<div class="col-50 u-no-gutter">col 50%</div>
+				<div class="col-30 u-no-gutter">col 30%</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!--Example no gutter-->
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
+			<h2>Example no gutter</h2>
+
+			<div class="row">
+
+				<div class="col-33 u-no-gutter">
+					<h4>col 33%</h4>
+					<p>Lorem ipsum dolor amet sit lortem ipsum. Lorem ipsum dolor amet sit lortem ipsum. </p>
 				</div>
-				<div class="col-xs-100 col-md-50 col-lg-25">
-					col-xs-100 col-md-50 col-lg-25
+				<div class="col-33 u-no-gutter u-txt-diap">
+					<img src="http://lorempixel.com/500/300/food">
 				</div>
-				<div class="col-xs-100 col-md-50 col-lg-25">
-					col-xs-100 col-md-50 col-lg-25
-				</div>
-				<div class="col-xs-100 col-md-50 col-lg-25">
-					col-xs-100 col-md-50 col-lg-25
+				<div class="col-33 u-no-gutter">
+					<div class="u-bgc-primary u-txt-diap">
+						<h4>col 33%</h4>
+						<p>Lorem ipsum dolor amet sit lortem ipsum. Lorem ipsum dolor amet sit lortem ipsum. </p>
+					</div>
 				</div>
 
 			</div>
@@ -119,11 +240,251 @@
 		</div>
 	</div>
 
-	<div class="browser-width">
-		<div class="content-width container">
+	<!--Small gutter-->
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
+			<h2>Small gutter (add <code>.u-gutter-small</code> to <code>.row</code>)</h2>
+			<div class="row u-gutter-small">
+
+				<div class="col-20">col 20%</div>
+				<div class="col-50">col 50%</div>
+				<div class="col-30">col 30%</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!--Vertical small gutter-->
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
+			<h2>Vertical small gutter (add <code>.u-vertical-gutter</code> and <code>.u-gutter-small</code>) to <code>.row</code></h2>
+			<div class="row u-vertical-gutter u-gutter-small">
+
+				<div class="col-25">col 25%</div>
+				<div class="col-75">col 75%</div>
+				<div class="col-33">col 33%</div>
+				<div class="col-33">col 33%</div>
+				<div class="col-33">col 33%</div>
+				<div class="col-20">col 20%</div>
+				<div class="col-50">col 50%</div>
+				<div class="col-30">col 30%</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!--Example of use small gutter-->
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
+			<h2>Example of use small gutter</h2>
+			<div class="row u-gutter-small">
+
+				<div class="col-30"><img src="http://lorempixel.com/500/300/food"></div>
+				<div class="col-70">
+					<div class="row u-auto-clear u-gutter-small u-vertical-gutter">
+						<div class="col-20">
+							<div class="u-bgc-primary u-txt-diap">
+								<a href="#">col 20%</a>
+							</div>
+						</div>
+						<div class="col-20">
+							<div class="u-bgc-primary u-txt-diap">
+								<a href="#">col 20%</a>
+							</div>
+						</div>
+						<div class="col-20">
+							<div class="u-bgc-primary u-txt-diap">
+								<a href="#">col 20%</a>
+							</div>
+						</div>
+						<div class="col-20">
+							<div class="u-bgc-primary u-txt-diap">
+								<a href="#">col 20%</a>
+							</div>
+						</div>
+						<div class="col-20">
+							<div class="u-bgc-primary u-txt-diap">
+								<a href="#">col 20%</a>
+							</div>
+						</div>
+						<div class="col-20">
+							<div class="u-bgc-primary u-txt-diap">
+								<a href="#">col 20%</a>
+							</div>
+						</div>
+						<div class="col-20">
+							<div class="u-bgc-primary u-txt-diap">
+								<a href="#">col 20%</a>
+							</div>
+						</div>
+						<div class="col-20">
+							<div class="u-bgc-primary u-txt-diap">
+								<a href="#">col 20%</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!--Nested grid-->
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
+			<h2>Nested grid</h2>
+			<div class="row u-mb-default">
+
+				<div class="col-25">col 25%</div>
+				<div class="col-75">
+					col-75<br />
+					with nested row
+					<div class="row">
+						<div class="col-33">col 33%</div>
+						<div class="col-33">
+							col 33%<br />
+							with nested row
+							<div class="row">
+								<div class="col-50">col 50%</div>
+								<div class="col-50">col 50%</div>
+							</div>
+						</div>
+						<div class="col-33">col 33%</div>
+					</div>
+
+				</div>
+
+			</div>
+
+
+		</div>
+	</div>
+
+	<!--Push pull-->
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
+			<h2>Push pull</h2>
+			<div class="row u-mb-default">
+
+				<div class="col-30"><img src="http://lorempixel.com/500/300/food"></div>
+				<div class="col-70">col 70%</div>
+
+			</div>
+			<div class="row u-mb-default">
+
+				<div class="col-30 u-push-right"><img src="http://lorempixel.com/500/300/food"></div>
+				<div class="col-70">col 70%</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<!--Combining small and standard gutter-->
+	<div class="o-browser-width">
+		<div class="o-content-width">
+			<h2>Combining small and standard gutter</h2>
+
+			<div class="row u-gutter-small u-mb-default">
+
+				<div class="col-25">col 25%</div>
+				<div class="col-75">
+					col-75<br>
+					with nested row
+					<div class="row">
+						<div class="col-33">col 33%</div>
+						<div class="col-33">
+							col 33%<br>
+							with nested row
+							<div class="row u-gutter-small">
+								<div class="col-50">col 50%</div>
+								<div class="col-50">col 50%</div>
+							</div>
+						</div>
+						<div class="col-33">col 33%</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<div class="o-browser-width u-mb-default">
+		<div class="o-content-width">
+
+			<div class="row u-mb-default">
+
+				<div class="col-25">col 25%</div>
+				<div class="col-75">
+					col-75<br>
+					with nested row
+					<div class="row u-gutter-small">
+						<div class="col-33">col 33%</div>
+						<div class="col-33">
+							col 33%<br>
+							with nested row
+							<div class="row">
+								<div class="col-50">col 50%</div>
+								<div class="col-50">col 50%</div>
+							</div>
+						</div>
+						<div class="col-33">col 33%</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<!--Vertical aligned-->
+	<div class="o-browser-width u-mb-default">
+		<div class="o-content-width">
+			<h2>Vertical aligned</h2>
+			<div class="row u-valigned">
+
+				<div class="col-xs-25">
+					col-xs-25<br />
+					<img src="http://lorempixel.com/400/200/food">
+				</div>
+				<div class="col-xs-25">col-xs-25</div>
+				<div class="col-xs-25">col-xs-25</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!--Justified and vertical aligned-->
+	<div class="o-browser-width u-mb-default">
+		<div class="o-content-width">
+			<h2>Justified and vertical aligned</h2>
+
+			<div class="row u-justified u-valigned">
+
+				<div class="col-">
+					col-<br />
+					<img src="http://lorempixel.com/400/200/food">
+				</div>
+				<div class="col-">col-</div>
+
+			</div>
+		</div>
+	</div>
+
+	<br /><br /><br /><br />
+
+	<br /><br /><br /><br />
+
+	<br /><br /><br /><br />
+
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
 			<h2>Flexible amount of items and justifing (add <code>.u-justified</code> to <code>.row</code>)</h2>
 			<p>Don't combine u-auto-clear and u-justified. Auto clearing is embedded in justified option.</p>
-            <p><strong style="color:red">TODO</strong>: maximal amount of items per row -> setting ( now this is 4 (25%) )</p>
+			<p><strong style="color:red">TODO</strong>: maximal amount of items per row -> setting ( now this is 4 (25%) )</p>
 
 			<h3>1 item</h3>
 			<div class="row u-justified">
@@ -269,78 +630,123 @@
 	</div>
 
 	<!--Horizontally aligned centered-->
-	<div class="browser-width">
-		<div class="content-width container">
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
 			<h2>Horizontally aligned centered (add <code>.u-centered</code> to <code>.row</code>)</h2>
-            <p>Items are automatically beautified in thier composition, i.e. 4/1 becomes 3/2. To disable this add <code>.u-centered-flat</code> to <code>.row</code></p>
-            
-            <h3>3 cols (33.3333%)</h3>
-            <h4>1 item 3 cols (33.3333%)</h4>
-            <div class="row u-centered">
-                <div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
-                    col-xs-100 col-sm-50 col-md-50 col-lg-33
-                </div>
-            </div>
-            <h4>2 items 3 cols (33.3333%)</h4>
-            <div class="row u-centered">
-                <div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
-                    col-xs-100 col-sm-50 col-md-50 col-lg-33
-                </div>
-                <div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
-                    col-xs-100 col-sm-50 col-md-50 col-lg-33
-                </div>
-            </div>
-            <h4>3 items 3 cols (33.3333%)</h4>
-            <div class="row u-centered">
-                <div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
-                    col-xs-100 col-sm-50 col-md-50 col-lg-33
-                </div>
-                <div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
-                    col-xs-100 col-sm-50 col-md-50 col-lg-33
-                </div>
-                <div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
-                    col-xs-100 col-sm-50 col-md-50 col-lg-33
-                </div>
-            </div>
-            <h4>4 items 3 cols (33.3333%)</h4>
-            <p>Automatically beautified the composition from 3/1 to 2/2 for large screen</p>
-            <div class="row u-centered">
-                <div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
-                    col-xs-100 col-sm-50 col-md-50 col-lg-33
-                </div>
-                <div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
-                    col-xs-100 col-sm-50 col-md-50 col-lg-33
-                </div>
-                <div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
-                    col-xs-100 col-sm-50 col-md-50 col-lg-33
-                </div>
-                <div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
-                    col-xs-100 col-sm-50 col-md-50 col-lg-33
-                </div>
-            </div>
-            <h4>5 items 3 cols (33.3333%)</h4>
-            <div class="row u-centered">
-                <div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
-                    col-xs-100 col-sm-50 col-md-50 col-lg-33
-                </div>
-                <div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
-                    col-xs-100 col-sm-50 col-md-50 col-lg-33
-                </div>
-                <div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
-                    col-xs-100 col-sm-50 col-md-50 col-lg-33
-                </div>
-                <div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
-                    col-xs-100 col-sm-50 col-md-50 col-lg-33
-                </div>
-                <div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
-                    col-xs-100 col-sm-50 col-md-50 col-lg-33
-                </div>
-            </div>
+			<p>Items are automatically beautified in thier composition, i.e. 4/1 becomes 3/2. To disable this add <code>.u-centered-flat</code> to <code>.row</code></p>
 
-            <br /><br /><br /><br />
+			<h3>3 cols (33.3333%)</h3>
+			<h4>1 item 3 cols (33.3333%)</h4>
+			<div class="row u-centered">
+				<div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
+					col-xs-100 col-sm-50 col-md-50 col-lg-33
+				</div>
+			</div>
+			<h4>2 items 3 cols (33.3333%)</h4>
+			<div class="row u-centered">
+				<div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
+					col-xs-100 col-sm-50 col-md-50 col-lg-33
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
+					col-xs-100 col-sm-50 col-md-50 col-lg-33
+				</div>
+			</div>
+			<h4>3 items 3 cols (33.3333%)</h4>
+			<div class="row u-centered">
+				<div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
+					col-xs-100 col-sm-50 col-md-50 col-lg-33
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
+					col-xs-100 col-sm-50 col-md-50 col-lg-33
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
+					col-xs-100 col-sm-50 col-md-50 col-lg-33
+				</div>
+			</div>
+			<h4>4 items 3 cols (33.3333%)</h4>
+			<p>Automatically beautified the composition from 3/1 to 2/2 for large screen</p>
+			<div class="row u-centered">
+				<div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
+					col-xs-100 col-sm-50 col-md-50 col-lg-33
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
+					col-xs-100 col-sm-50 col-md-50 col-lg-33
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
+					col-xs-100 col-sm-50 col-md-50 col-lg-33
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
+					col-xs-100 col-sm-50 col-md-50 col-lg-33
+				</div>
+			</div>
+			<h4>5 items 3 cols (33.3333%)</h4>
+			<div class="row u-centered">
+				<div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
+					col-xs-100 col-sm-50 col-md-50 col-lg-33
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
+					col-xs-100 col-sm-50 col-md-50 col-lg-33
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
+					col-xs-100 col-sm-50 col-md-50 col-lg-33
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
+					col-xs-100 col-sm-50 col-md-50 col-lg-33
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
+					col-xs-100 col-sm-50 col-md-50 col-lg-33
+				</div>
+			</div>
+			<h4>6 items 3 cols (33.3333%)</h4>
+			<div class="row u-centered">
+				<div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
+					col-xs-100 col-sm-50 col-md-50 col-lg-33
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
+					col-xs-100 col-sm-50 col-md-50 col-lg-33
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
+					col-xs-100 col-sm-50 col-md-50 col-lg-33
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
+					col-xs-100 col-sm-50 col-md-50 col-lg-33
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
+					col-xs-100 col-sm-50 col-md-50 col-lg-33
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
+					col-xs-100 col-sm-50 col-md-50 col-lg-33
+				</div>
+			</div>
+			<h4>7 items 3 cols (33.3333%)</h4>
+			<div class="row u-centered">
+				<div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
+					col-xs-100 col-sm-50 col-md-50 col-lg-33
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
+					col-xs-100 col-sm-50 col-md-50 col-lg-33
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
+					col-xs-100 col-sm-50 col-md-50 col-lg-33
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
+					col-xs-100 col-sm-50 col-md-50 col-lg-33
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
+					col-xs-100 col-sm-50 col-md-50 col-lg-33
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
+					col-xs-100 col-sm-50 col-md-50 col-lg-33
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-50 col-lg-33">
+					col-xs-100 col-sm-50 col-md-50 col-lg-33
+				</div>
+			</div>
 
-            <h3>4 cols (25%)</h3>
-            <h4>1 item 4 cols (25%)</h4>
+			<br /><br /><br /><br />
+
+			<h3>4 cols (25%)</h3>
+			<h4>1 item 4 cols (25%)</h4>
 			<div class="row u-centered">
 				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
 					col-xs-100 col-sm-50 col-md-33 col-lg-25
@@ -387,183 +793,376 @@
 			</div>
 
 			<h4>5 items 4 cols (25%)</h4>
-            <div class="row u-centered">
-                <div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
-                    col-xs-100 col-sm-50 col-md-33 col-lg-25
-                </div>
-                <div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
-                    col-xs-100 col-sm-50 col-md-33 col-lg-25
-                </div>
-                <div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
-                    col-xs-100 col-sm-50 col-md-33 col-lg-25
-                </div>
-                <div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
-                    col-xs-100 col-sm-50 col-md-33 col-lg-25
-                </div>
-                <div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
-                    col-xs-100 col-sm-50 col-md-33 col-lg-25
-                </div>
-            </div>
+			<div class="row u-centered">
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+			</div>
 
-            <h4>6 items 4 cols (25%)</h4>
-            <div class="row u-centered">
-                <div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
-                    col-xs-100 col-sm-50 col-md-33 col-lg-25
-                </div>
-                <div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
-                    col-xs-100 col-sm-50 col-md-33 col-lg-25
-                </div>
-                <div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
-                    col-xs-100 col-sm-50 col-md-33 col-lg-25
-                </div>
-                <div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
-                    col-xs-100 col-sm-50 col-md-33 col-lg-25
-                </div>
-                <div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
-                    col-xs-100 col-sm-50 col-md-33 col-lg-25
-                </div>
-                <div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
-                    col-xs-100 col-sm-50 col-md-33 col-lg-25
-                </div>
-            </div>
+			<h4>6 items 4 cols (25%)</h4>
+			<div class="row u-centered">
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+			</div>
 
-            <h4>7 items 4 cols (25%)</h4>
-            <div class="row u-centered">
-                <div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
-                    col-xs-100 col-sm-50 col-md-33 col-lg-25
-                </div>
-                <div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
-                    col-xs-100 col-sm-50 col-md-33 col-lg-25
-                </div>
-                <div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
-                    col-xs-100 col-sm-50 col-md-33 col-lg-25
-                </div>
-                <div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
-                    col-xs-100 col-sm-50 col-md-33 col-lg-25
-                </div>
-                <div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
-                    col-xs-100 col-sm-50 col-md-33 col-lg-25
-                </div>
-                <div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
-                    col-xs-100 col-sm-50 col-md-33 col-lg-25
-                </div>
-                <div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
-                    col-xs-100 col-sm-50 col-md-33 col-lg-25
-                </div>
-            </div>
+			<h4>7 items 4 cols (25%)</h4>
+			<div class="row u-centered">
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+			</div>
+			<h4>8 items 4 cols (25%)</h4>
+			<div class="row u-centered">
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+			</div>
+			<h4>9 items 4 cols (25%)</h4>
+			<div class="row u-centered">
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+				<div class="col-xs-100 col-sm-50 col-md-33 col-lg-25">
+					col-xs-100 col-sm-50 col-md-33 col-lg-25
+				</div>
+			</div>
 
-            <br /><br /><br /><br />
+			<br /><br /><br /><br />
 
+			<h3>5 cols (20%)</h3>
+			<h4>1 item 5 cols (20%)</h4>
+			<div class="row u-centered">
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+			</div>
+			<h4>2 items 5 cols (20%)</h4>
+			<div class="row u-centered">
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+			</div>
+			<h4>3 items 5 cols (20%)</h4>
+			<div class="row u-centered">
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+			</div>
+			<h4>4 items 5 cols (20%)</h4>
+			<div class="row u-centered">
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+			</div>
+			<h4>5 items 5 cols (20%)</h4>
+			<div class="row u-centered">
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+			</div>
+			<h4>6 items 5 cols (20%)</h4>
+			<div class="row u-centered">
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+			</div>
+			<h4>7 items 5 cols (20%)</h4>
+			<div class="row u-centered">
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+			</div>
+			<h4>8 items 5 cols (20%)</h4>
+			<div class="row u-centered">
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+				<div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
+					col-xs-50 col-sm-33 col-md-25 col-lg-20
+				</div>
+			</div>
 
-            <h3>5 cols (20%)</h3>
-            <h4>1 item 5 cols (20%)</h4>
-            <div class="row u-centered">
-                <div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
-                    col-xs-50 col-sm-33 col-md-25 col-lg-20
-                </div>
-            </div>
-            <h4>2 items 5 cols (20%)</h4>
-            <div class="row u-centered">
-                <div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
-                    col-xs-50 col-sm-33 col-md-25 col-lg-20
-                </div>
-                <div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
-                    col-xs-50 col-sm-33 col-md-25 col-lg-20
-                </div>
-            </div>
-            <h4>3 items 5 cols (20%)</h4>
-            <div class="row u-centered">
-                <div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
-                    col-xs-50 col-sm-33 col-md-25 col-lg-20
-                </div>
-                <div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
-                    col-xs-50 col-sm-33 col-md-25 col-lg-20
-                </div>
-                <div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
-                    col-xs-50 col-sm-33 col-md-25 col-lg-20
-                </div>
-            </div>
-            <h4>4 items 5 cols (20%)</h4>
-            <div class="row u-centered">
-                <div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
-                    col-xs-50 col-sm-33 col-md-25 col-lg-20
-                </div>
-                <div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
-                    col-xs-50 col-sm-33 col-md-25 col-lg-20
-                </div>
-                <div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
-                    col-xs-50 col-sm-33 col-md-25 col-lg-20
-                </div>
-                <div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
-                    col-xs-50 col-sm-33 col-md-25 col-lg-20
-                </div>
-            </div>
-            <h4>5 items 5 cols (20%)</h4>
-            <div class="row u-centered">
-                <div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
-                    col-xs-50 col-sm-33 col-md-25 col-lg-20
-                </div>
-                <div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
-                    col-xs-50 col-sm-33 col-md-25 col-lg-20
-                </div>
-                <div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
-                    col-xs-50 col-sm-33 col-md-25 col-lg-20
-                </div>
-                <div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
-                    col-xs-50 col-sm-33 col-md-25 col-lg-20
-                </div>
-                <div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
-                    col-xs-50 col-sm-33 col-md-25 col-lg-20
-                </div>
-            </div>
-            <h4>6 items 5 cols (20%)</h4>
-            <div class="row u-centered">
-                <div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
-                    col-xs-50 col-sm-33 col-md-25 col-lg-20
-                </div>
-                <div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
-                    col-xs-50 col-sm-33 col-md-25 col-lg-20
-                </div>
-                <div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
-                    col-xs-50 col-sm-33 col-md-25 col-lg-20
-                </div>
-                <div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
-                    col-xs-50 col-sm-33 col-md-25 col-lg-20
-                </div>
-                <div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
-                    col-xs-50 col-sm-33 col-md-25 col-lg-20
-                </div>
-                <div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
-                    col-xs-50 col-sm-33 col-md-25 col-lg-20
-                </div>
-            </div>
-            <h4>7 items 5 cols (20%)</h4>
-            <div class="row u-centered">
-                <div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
-                    col-xs-50 col-sm-33 col-md-25 col-lg-20
-                </div>
-                <div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
-                    col-xs-50 col-sm-33 col-md-25 col-lg-20
-                </div>
-                <div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
-                    col-xs-50 col-sm-33 col-md-25 col-lg-20
-                </div>
-                <div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
-                    col-xs-50 col-sm-33 col-md-25 col-lg-20
-                </div>
-                <div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
-                    col-xs-50 col-sm-33 col-md-25 col-lg-20
-                </div>
-                <div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
-                    col-xs-50 col-sm-33 col-md-25 col-lg-20
-                </div>
-                <div class="col-xs-50 col-sm-33 col-md-25 col-lg-20">
-                    col-xs-50 col-sm-33 col-md-25 col-lg-20
-                </div>
-            </div>
-            
+			<br /><br /><br /><br />
 
-            <h3>8 cols (12%)</h3>
+			<h3>6 cols (16.6665%)</h3>
+			<h4>1 item 6 cols (16.6665%)</h4>
+			<div class="row u-centered">
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+			</div>
+			<h4>2 items 6 cols (16.6665%)</h4>
+			<div class="row u-centered">
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+			</div>
+			<h4>3 items 6 cols (16.6665%)</h4>
+			<div class="row u-centered">
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+			</div>
+			<h4>4 items 6 cols (16.6665%)</h4>
+			<div class="row u-centered">
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+			</div>
+			<h4>5 items 6 cols (16.6665%)</h4>
+			<div class="row u-centered">
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+			</div>
+			<h4>6 items 6 cols (16.6665%)</h4>
+			<div class="row u-centered">
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+			</div>
+			<h4>7 items 6 cols (16.6665%)</h4>
+			<div class="row u-centered">
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+			</div>
+
+			<br /><br /><br /><br />
+
+			<h3>8 cols (12%)</h3>
 			<h4>8 items</h4>
 			<div class="row u-centered">
 				<div class="col-xs-50 col-sm-33 col-md-20 col-lg-12">
@@ -641,433 +1240,64 @@
 				</div>
 			</div>
 
-            <h3>5 items col-lg-33</h3>
-            <div class="row u-centered">
-                <div class="col-xs-100 col-md-50 col-lg-33">
-                    col-xs-100 col-md-50 col-lg-33
-                </div>
-                <div class="col-xs-100 col-md-50 col-lg-33">
-                    col-xs-100 col-md-50 col-lg-33
-                </div>
-                <div class="col-xs-100 col-md-50 col-lg-33">
-                    col-xs-100 col-md-50 col-lg-33
-                </div>
-                <div class="col-xs-100 col-md-50 col-lg-33">
-                    col-xs-100 col-md-50 col-lg-33
-                </div>
-                <div class="col-xs-100 col-md-50 col-lg-33">
-                    col-xs-100 col-md-50 col-lg-33
-                </div>
-            </div>
-
-            <h3>7 items col-lg-16 (6cols)</h3>
-            <div class="row u-centered">
-                <div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
-                    col-xs-33 col-sm-25 col-md-20 col-lg-16
-                </div>
-                <div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
-                    col-xs-33 col-sm-25 col-md-20 col-lg-16
-                </div>
-                <div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
-                    col-xs-33 col-sm-25 col-md-20 col-lg-16
-                </div>
-                <div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
-                    col-xs-33 col-sm-25 col-md-20 col-lg-16
-                </div>
-                <div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
-                    col-xs-33 col-sm-25 col-md-20 col-lg-16
-                </div>
-                <div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
-                    col-xs-33 col-sm-25 col-md-20 col-lg-16
-                </div>
-                <div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
-                    col-xs-33 col-sm-25 col-md-20 col-lg-16
-                </div>
-            </div>
-
-            <h3>4 items col-lg-33 (3cols)</h3>
-            <div class="row u-centered">
-                <div class="col-xs-33 col-sm-25 col-md-50 col-lg-33">
-                    col-xs-33 col-sm-25 col-md-20 col-lg-16
-                </div>
-            </div>
-
-		</div>
-	</div>
-
-	<!--Offset-->
-	<div class="browser-width">
-		<div class="content-width container">
-			<h2>Offset</h2>
-			<div class="row u-auto-clear">
-
-				<div class="col-xs-100 col-md-50 col-lg-25 col-lg-offset-25">
-					col-xs-100<br />
-					col-md-50<br />
-					col-lg-25<br />
-					col-lg-offset-25
+			<h3>5 items col-lg-33</h3>
+			<div class="row u-centered">
+				<div class="col-xs-100 col-md-50 col-lg-33">
+					col-xs-100 col-md-50 col-lg-33
 				</div>
-
-				<div class="col-xs-100 col-md-50 col-lg-25 col-lg-offset-25">
-					col-xs-100<br />
-					col-md-50<br />
-					col-lg-25<br />
-					col-lg-offset-25
+				<div class="col-xs-100 col-md-50 col-lg-33">
+					col-xs-100 col-md-50 col-lg-33
 				</div>
-
-
-			</div>
-
-		</div>
-	</div>
-
-	<!--Wrapping-->
-	<div class="browser-width">
-		<div class="content-width container">
-			<h2>Wrapping</h2>
-			<div class="row">
-
-				<div class="col-30">col 30%</div>
-				<div class="col-30">col 30%</div>
-				<div class="col-50">col 50%</div>
-				<div class="col-33">col 33%</div>
-				<div class="col-33">col 33%</div>
-				<div class="col-33">col 33%</div>
-				<div class="col-20">col 20%</div>
-				<div class="col-100">col 100%</div>
-				<div class="col-50">col 50%</div>
-				<div class="col-30">col 30%</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!--Vertical gutter-->
-	<div class="browser-width">
-		<div class="content-width container">
-			<h2>Vertical gutter (add <code>.u-vertical-gutter</code>) to <code>.row</code></h2>
-			<div class="row u-vertical-gutter">
-
-				<div class="col-25">col 25%</div>
-				<div class="col-75">col 75%</div>
-				<div class="col-33">col 33%</div>
-				<div class="col-33">col 33%</div>
-				<div class="col-33">col 33%</div>
-				<div class="col-20">col 20%</div>
-				<div class="col-50">col 50%</div>
-				<div class="col-30">col 30%</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!--Margin bottom-->
-	<div class="browser-width">
-		<div class="content-width container">
-			<h2>Margin bottom (add <code>.container</code> to <code>.row</code>)</h2>
-			<div class="row container">
-
-				<div class="col-25">col 25%</div>
-				<div class="col-75">col 75%</div>
-
-			</div>
-			<div class="row container u-auto-clear">
-
-				<div class="col-33">col 33%</div>
-				<div class="col-33">col 33%</div>
-				<div class="col-33">col 33%</div>
-
-			</div>
-			<div class="row container">
-
-				<div class="col-20">col 20%</div>
-				<div class="col-50">col 50%</div>
-				<div class="col-30">col 30%</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!--No gutter-->
-	<div class="browser-width">
-		<div class="content-width container">
-			<h2>No gutter (add <code>.u-no-gutter</code> to <code>.col</code>)</h2>
-			<div class="row">
-
-				<div class="col-20 u-no-gutter">col 20%</div>
-				<div class="col-50 u-no-gutter">col 50%</div>
-				<div class="col-30 u-no-gutter">col 30%</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!--Example no gutter-->
-	<div class="browser-width">
-		<div class="content-width container">
-			<h2>Example no gutter</h2>
-
-			<div class="row">
-
-				<div class="col-33 u-no-gutter">
-					<h4>col 33%</h4>
-					<p>Lorem ipsum dolor amet sit lortem ipsum. Lorem ipsum dolor amet sit lortem ipsum. </p>
+				<div class="col-xs-100 col-md-50 col-lg-33">
+					col-xs-100 col-md-50 col-lg-33
 				</div>
-				<div class="col-33 u-no-gutter u-txt-diap">
-					<img src="http://lorempixel.com/500/300/food">
+				<div class="col-xs-100 col-md-50 col-lg-33">
+					col-xs-100 col-md-50 col-lg-33
 				</div>
-				<div class="col-33 u-no-gutter">
-					<div class="u-bgc-primary u-txt-diap">
-						<h4>col 33%</h4>
-						<p>Lorem ipsum dolor amet sit lortem ipsum. Lorem ipsum dolor amet sit lortem ipsum. </p>
-					</div>
+				<div class="col-xs-100 col-md-50 col-lg-33">
+					col-xs-100 col-md-50 col-lg-33
 				</div>
-
 			</div>
 
-		</div>
-	</div>
-
-	<!--Small gutter-->
-	<div class="browser-width">
-		<div class="content-width container">
-			<h2>Small gutter (add <code>.u-gutter-small</code> to <code>.row</code>)</h2>
-			<div class="row u-gutter-small">
-
-				<div class="col-20">col 20%</div>
-				<div class="col-50">col 50%</div>
-				<div class="col-30">col 30%</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!--Vertical small gutter-->
-	<div class="browser-width">
-		<div class="content-width container">
-			<h2>Vertical small gutter (add <code>.u-vertical-gutter</code> and <code>.u-gutter-small</code>) to <code>.row</code></h2>
-			<div class="row u-vertical-gutter u-gutter-small">
-
-				<div class="col-25">col 25%</div>
-				<div class="col-75">col 75%</div>
-				<div class="col-33">col 33%</div>
-				<div class="col-33">col 33%</div>
-				<div class="col-33">col 33%</div>
-				<div class="col-20">col 20%</div>
-				<div class="col-50">col 50%</div>
-				<div class="col-30">col 30%</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!--Example of use small gutter-->
-	<div class="browser-width">
-		<div class="content-width container">
-			<h2>Example of use small gutter</h2>
-			<div class="row u-gutter-small">
-
-				<div class="col-30"><img src="http://lorempixel.com/500/300/food"></div>
-				<div class="col-70">
-					<div class="row u-auto-clear u-gutter-small u-vertical-gutter">
-						<div class="col-20">
-							<div class="u-bgc-primary u-txt-diap">
-								<a href="#">col 20%</a>
-							</div>
-						</div>
-						<div class="col-20">
-							<div class="u-bgc-primary u-txt-diap">
-								<a href="#">col 20%</a>
-							</div>
-						</div>
-						<div class="col-20">
-							<div class="u-bgc-primary u-txt-diap">
-								<a href="#">col 20%</a>
-							</div>
-						</div>
-						<div class="col-20">
-							<div class="u-bgc-primary u-txt-diap">
-								<a href="#">col 20%</a>
-							</div>
-						</div>
-						<div class="col-20">
-							<div class="u-bgc-primary u-txt-diap">
-								<a href="#">col 20%</a>
-							</div>
-						</div>
-						<div class="col-20">
-							<div class="u-bgc-primary u-txt-diap">
-								<a href="#">col 20%</a>
-							</div>
-						</div>
-						<div class="col-20">
-							<div class="u-bgc-primary u-txt-diap">
-								<a href="#">col 20%</a>
-							</div>
-						</div>
-						<div class="col-20">
-							<div class="u-bgc-primary u-txt-diap">
-								<a href="#">col 20%</a>
-							</div>
-						</div>
-					</div>
+			<h3>7 items col-lg-16 (6cols)</h3>
+			<div class="row u-centered">
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
 				</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!--Nested grid-->
-	<div class="browser-width">
-		<div class="content-width container">
-			<h2>Nested grid</h2>
-			<div class="row container">
-
-				<div class="col-25">col 25%</div>
-				<div class="col-75">
-					col-75<br />
-					with nested row
-					<div class="row">
-						<div class="col-33">col 33%</div>
-						<div class="col-33">
-							col 33%<br />
-							with nested row
-							<div class="row">
-								<div class="col-50">col 50%</div>
-								<div class="col-50">col 50%</div>
-							</div>
-						</div>
-						<div class="col-33">col 33%</div>
-					</div>
-
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
 				</div>
-
-			</div>
-
-
-		</div>
-	</div>
-
-	<!--Push pull-->
-	<div class="browser-width">
-		<div class="content-width container">
-			<h2>Push pull</h2>
-			<div class="row container">
-
-				<div class="col-30"><img src="http://lorempixel.com/500/300/food"></div>
-				<div class="col-70">col 70%</div>
-
-			</div>
-			<div class="row container">
-
-				<div class="col-30 u-push-right"><img src="http://lorempixel.com/500/300/food"></div>
-				<div class="col-70">col 70%</div>
-
-			</div>
-
-		</div>
-	</div>
-
-	<!--Combining small and standard gutter-->
-	<div class="browser-width">
-		<div class="content-width">
-			<h2>Combining small and standard gutter</h2>
-
-			<div class="row u-gutter-small container">
-
-				<div class="col-25">col 25%</div>
-				<div class="col-75">
-					col-75<br>
-					with nested row
-					<div class="row">
-						<div class="col-33">col 33%</div>
-						<div class="col-33">
-							col 33%<br>
-							with nested row
-							<div class="row u-gutter-small">
-								<div class="col-50">col 50%</div>
-								<div class="col-50">col 50%</div>
-							</div>
-						</div>
-						<div class="col-33">col 33%</div>
-					</div>
-
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
 				</div>
-
-			</div>
-
-		</div>
-	</div>
-
-	<div class="browser-width">
-		<div class="content-width">
-
-			<div class="row container">
-
-				<div class="col-25">col 25%</div>
-				<div class="col-75">
-					col-75<br>
-					with nested row
-					<div class="row u-gutter-small">
-						<div class="col-33">col 33%</div>
-						<div class="col-33">
-							col 33%<br>
-							with nested row
-							<div class="row">
-								<div class="col-50">col 50%</div>
-								<div class="col-50">col 50%</div>
-							</div>
-						</div>
-						<div class="col-33">col 33%</div>
-					</div>
-
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
 				</div>
-
-			</div>
-
-		</div>
-	</div>
-
-	<br /><br /><br /><br />
-
-	<!--Vertical aligned-->
-	<div class="browser-width">
-		<div class="content-width">
-			<h2>Vertical aligned</h2>
-			<div class="row u-valigned">
-
-				<div class="col-xs-25">
-					col-xs-25<br />
-					<img src="http://lorempixel.com/400/200/food">
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
 				</div>
-				<div class="col-xs-25">col-xs-25</div>
-				<div class="col-xs-25">col-xs-25</div>
-
-			</div>
-		</div>
-	</div>
-
-	<br /><br /><br /><br />
-
-	<!--Justified and vertical aligned-->
-	<div class="browser-width">
-		<div class="content-width">
-			<h2>Justified and vertical aligned</h2>
-
-			<div class="row u-justified u-valigned">
-
-				<div class="col-">
-					col-<br />
-					<img src="http://lorempixel.com/400/200/food">
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
 				</div>
-				<div class="col-">col-</div>
-
+				<div class="col-xs-33 col-sm-25 col-md-20 col-lg-16">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
 			</div>
+
+			<h3>4 items col-lg-33 (3cols)</h3>
+			<div class="row u-centered">
+				<div class="col-xs-33 col-sm-25 col-md-50 col-lg-33">
+					col-xs-33 col-sm-25 col-md-20 col-lg-16
+				</div>
+			</div>
+
 		</div>
 	</div>
 
-	<br /><br /><br /><br />
+	
 
-
+	<script src="dist/js/libs.js"></script>
+	<script src="dist/js/app.min.js"></script>
 </body>
+
 </html>
