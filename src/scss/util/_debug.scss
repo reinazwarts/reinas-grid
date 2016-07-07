@@ -18,25 +18,25 @@ body.debug {
         margin-top: 0;
         height: 50px;
         background-color: #E6F0FF;
-        outline: dashed 1px rgba(0, 100, 255, 0.2);
+        outline: dashed 1px rgba(0, 100, 255, 0.3);
     }
     &:after {
         content: 'col';
         margin-top: 25px;
         background-color: #E9E3FF;
-        outline: dashed 1px rgba(255, 100, 255, 0.3);
+        outline: dashed 1px rgba(255, 100, 255, 0.4);
     }
 
     .row {
 	    background-color: rgba(0, 100, 255, 0.1);
-        outline: dashed 1px rgba(0, 100, 255, 0.2);
+        outline: dashed 1px rgba(0, 100, 255, 0.3);
 
         &.u-gutter-small > [class*=col-]:before {
-            left: $spacing-tiny;
+            left: ($spacing-default / 4);
         }
 
         &.u-gutter-small > [class*=col-]:after {
-            right: $spacing-tiny;
+            right: ($spacing-default / 4);
         }
     }
 
@@ -44,21 +44,21 @@ body.debug {
 	    &:not([class*=u-bgc-]) {
             background-color: rgba(255, 100, 255, 0.1);
 	    }
-        outline: dashed 1px rgba(255, 100, 255, 0.3);
+        outline: dashed 1px rgba(255, 100, 255, 0.4);
         position: relative;
         &:not(.u-no-gutter):before,
         &:not(.u-no-gutter):after {
             content: '';
             position: absolute;
-            left: $spacing-medium;
+            left: ($spacing-default / 2);
             top: 0;
             width: 1px;
             height: 100%;
-            border-left: dashed 1px rgba(255, 100, 255, 0.3);
+            border-left: dashed 1px rgba(255, 100, 255, 0.4);
         }
         &:not(.u-no-gutter):after {
             left: auto;
-            right: $spacing-medium;
+            right: ($spacing-default / 2);
         }
     }
 
@@ -84,10 +84,15 @@ body.debug {
 }
 code {
     color: orangered;
+	font-family: monospace;
 }
 .js-toggle-guidelines {
 	position: fixed;
 	z-index: 1;
 	top: 0;
 	right: 0;
+}
+pre {
+	font-family: monospace;
+	color: darkgrey;
 }
