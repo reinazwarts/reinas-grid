@@ -24,20 +24,7 @@
 	<div class="o-browser-width">
 		<div class="o-content-width u-mb-default">
 			<h2>Basic responsive grid</h2>
-			<h3>HTML</h3>
-			<pre>
-				<xmp>
-<div class="row">
-	<div class="col-xs-100 col-md-50 col-lg-25">col-xs-100 col-md-50 col-lg-25</div>
-	<div class="col-xs-100 col-md-50 col-lg-25">col-xs-100 col-md-50 col-lg-25</div>
-	<div class="col-xs-100 col-md-50 col-lg-25">col-xs-100 col-md-50 col-lg-25</div>
-	<div class="col-xs-100 col-md-50 col-lg-25">col-xs-100 col-md-50 col-lg-25</div>
-	<div class="col-xs-100 col-md-50 col-lg-25">col-xs-100 col-md-50 col-lg-25</div>
-	<div class="col-xs-100 col-md-50 col-lg-25">col-xs-100 col-md-50 col-lg-25</div>
-</div>
-				</xmp>
-			</pre>
-			<h3>Result</h3>
+			
 			<div class="row">
 
 				<div class="col-xs-100 col-md-50 col-lg-25">
@@ -117,6 +104,381 @@
 	</div>
 
 
+
+	
+
+	<!--Offset-->
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
+			<h2>Offset</h2>
+			<div class="row u-auto-clear">
+
+				<div class="col-xs-100 col-md-50 col-lg-25 col-lg-offset-25">
+					col-xs-100<br />
+					col-md-50<br />
+					col-lg-25<br />
+					col-lg-offset-25
+				</div>
+
+				<div class="col-xs-100 col-md-50 col-lg-25 col-lg-offset-25">
+					col-xs-100<br />
+					col-md-50<br />
+					col-lg-25<br />
+					col-lg-offset-25
+				</div>
+
+
+			</div>
+
+		</div>
+	</div>
+
+	<!--Wrapping-->
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
+			<h2>Wrapping</h2>
+			<div class="row">
+
+				<div class="col-30">col 30%</div>
+				<div class="col-30">col 30%</div>
+				<div class="col-50">col 50%</div>
+				<div class="col-33">col 33%</div>
+				<div class="col-33">col 33%</div>
+				<div class="col-33">col 33%</div>
+				<div class="col-20">col 20%</div>
+				<div class="col-100">col 100%</div>
+				<div class="col-50">col 50%</div>
+				<div class="col-30">col 30%</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!--Vertical gutter-->
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
+			<h2>Vertical gutter (add <code>.u-vertical-gutter</code>) to <code>.row</code></h2>
+			<div class="row u-vertical-gutter">
+
+				<div class="col-25">col 25%</div>
+				<div class="col-75">col 75%</div>
+				<div class="col-33">col 33%</div>
+				<div class="col-33">col 33%</div>
+				<div class="col-33">col 33%</div>
+				<div class="col-20">col 20%</div>
+				<div class="col-50">col 50%</div>
+				<div class="col-30">col 30%</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!--Margin bottom-->
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
+			<h2>Margin bottom (add <code>.u-mb-default</code> to <code>.row</code>)</h2>
+			<div class="row u-mb-default">
+
+				<div class="col-25">col 25%</div>
+				<div class="col-75">col 75%</div>
+
+			</div>
+			<div class="row u-mb-default u-auto-clear">
+
+				<div class="col-33">col 33%</div>
+				<div class="col-33">col 33%</div>
+				<div class="col-33">col 33%</div>
+
+			</div>
+			<div class="row u-mb-default">
+
+				<div class="col-20">col 20%</div>
+				<div class="col-50">col 50%</div>
+				<div class="col-30">col 30%</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!--No gutter-->
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
+			<h2>No gutter (add <code>.u-no-gutter</code> to <code>.col</code>)</h2>
+			<div class="row">
+
+				<div class="col-20 u-no-gutter">col 20%</div>
+				<div class="col-50 u-no-gutter">col 50%</div>
+				<div class="col-30 u-no-gutter">col 30%</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!--Example no gutter-->
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
+			<h2>Example no gutter</h2>
+
+			<div class="row">
+
+				<div class="col-33 u-no-gutter">
+					<h4>col 33%</h4>
+					<p>Lorem ipsum dolor amet sit lortem ipsum. Lorem ipsum dolor amet sit lortem ipsum. </p>
+				</div>
+				<div class="col-33 u-no-gutter u-txt-diap">
+					<img src="http://lorempixel.com/500/300/food">
+				</div>
+				<div class="col-33 u-no-gutter">
+					<div class="u-bgc-primary u-txt-diap">
+						<h4>col 33%</h4>
+						<p>Lorem ipsum dolor amet sit lortem ipsum. Lorem ipsum dolor amet sit lortem ipsum. </p>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<!--Small gutter-->
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
+			<h2>Small gutter (add <code>.u-gutter-small</code> to <code>.row</code>)</h2>
+			<div class="row u-gutter-small">
+
+				<div class="col-20">col 20%</div>
+				<div class="col-50">col 50%</div>
+				<div class="col-30">col 30%</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!--Vertical small gutter-->
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
+			<h2>Vertical small gutter (add <code>.u-vertical-gutter</code> and <code>.u-gutter-small</code>) to <code>.row</code></h2>
+			<div class="row u-vertical-gutter u-gutter-small">
+
+				<div class="col-25">col 25%</div>
+				<div class="col-75">col 75%</div>
+				<div class="col-33">col 33%</div>
+				<div class="col-33">col 33%</div>
+				<div class="col-33">col 33%</div>
+				<div class="col-20">col 20%</div>
+				<div class="col-50">col 50%</div>
+				<div class="col-30">col 30%</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!--Example of use small gutter-->
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
+			<h2>Example of use small gutter</h2>
+			<div class="row u-gutter-small">
+
+				<div class="col-30"><img src="http://lorempixel.com/500/300/food"></div>
+				<div class="col-70">
+					<div class="row u-auto-clear u-gutter-small u-vertical-gutter">
+						<div class="col-20">
+							<div class="u-bgc-primary u-txt-diap">
+								<a href="#">col 20%</a>
+							</div>
+						</div>
+						<div class="col-20">
+							<div class="u-bgc-primary u-txt-diap">
+								<a href="#">col 20%</a>
+							</div>
+						</div>
+						<div class="col-20">
+							<div class="u-bgc-primary u-txt-diap">
+								<a href="#">col 20%</a>
+							</div>
+						</div>
+						<div class="col-20">
+							<div class="u-bgc-primary u-txt-diap">
+								<a href="#">col 20%</a>
+							</div>
+						</div>
+						<div class="col-20">
+							<div class="u-bgc-primary u-txt-diap">
+								<a href="#">col 20%</a>
+							</div>
+						</div>
+						<div class="col-20">
+							<div class="u-bgc-primary u-txt-diap">
+								<a href="#">col 20%</a>
+							</div>
+						</div>
+						<div class="col-20">
+							<div class="u-bgc-primary u-txt-diap">
+								<a href="#">col 20%</a>
+							</div>
+						</div>
+						<div class="col-20">
+							<div class="u-bgc-primary u-txt-diap">
+								<a href="#">col 20%</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!--Nested grid-->
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
+			<h2>Nested grid</h2>
+			<div class="row u-mb-default">
+
+				<div class="col-25">col 25%</div>
+				<div class="col-75">
+					col-75<br />
+					with nested row
+					<div class="row">
+						<div class="col-33">col 33%</div>
+						<div class="col-33">
+							col 33%<br />
+							with nested row
+							<div class="row">
+								<div class="col-50">col 50%</div>
+								<div class="col-50">col 50%</div>
+							</div>
+						</div>
+						<div class="col-33">col 33%</div>
+					</div>
+
+				</div>
+
+			</div>
+
+
+		</div>
+	</div>
+
+	<!--Push pull-->
+	<div class="o-browser-width">
+		<div class="o-content-width u-mb-default">
+			<h2>Push pull</h2>
+			<div class="row u-mb-default">
+
+				<div class="col-30"><img src="http://lorempixel.com/500/300/food"></div>
+				<div class="col-70">col 70%</div>
+
+			</div>
+			<div class="row u-mb-default">
+
+				<div class="col-30 u-push-right"><img src="http://lorempixel.com/500/300/food"></div>
+				<div class="col-70">col 70%</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<!--Combining small and standard gutter-->
+	<div class="o-browser-width">
+		<div class="o-content-width">
+			<h2>Combining small and standard gutter</h2>
+
+			<div class="row u-gutter-small u-mb-default">
+
+				<div class="col-25">col 25%</div>
+				<div class="col-75">
+					col-75<br>
+					with nested row
+					<div class="row">
+						<div class="col-33">col 33%</div>
+						<div class="col-33">
+							col 33%<br>
+							with nested row
+							<div class="row u-gutter-small">
+								<div class="col-50">col 50%</div>
+								<div class="col-50">col 50%</div>
+							</div>
+						</div>
+						<div class="col-33">col 33%</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<div class="o-browser-width u-mb-default">
+		<div class="o-content-width">
+
+			<div class="row u-mb-default">
+
+				<div class="col-25">col 25%</div>
+				<div class="col-75">
+					col-75<br>
+					with nested row
+					<div class="row u-gutter-small">
+						<div class="col-33">col 33%</div>
+						<div class="col-33">
+							col 33%<br>
+							with nested row
+							<div class="row">
+								<div class="col-50">col 50%</div>
+								<div class="col-50">col 50%</div>
+							</div>
+						</div>
+						<div class="col-33">col 33%</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<!--Vertical aligned-->
+	<div class="o-browser-width u-mb-default">
+		<div class="o-content-width">
+			<h2>Vertical aligned</h2>
+			<div class="row u-valigned">
+
+				<div class="col-xs-25">
+					col-xs-25<br />
+					<img src="http://lorempixel.com/400/200/food">
+				</div>
+				<div class="col-xs-25">col-xs-25</div>
+				<div class="col-xs-25">col-xs-25</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!--Justified and vertical aligned-->
+	<div class="o-browser-width u-mb-default">
+		<div class="o-content-width">
+			<h2>Justified and vertical aligned</h2>
+
+			<div class="row u-justified u-valigned">
+
+				<div class="col-">
+					col-<br />
+					<img src="http://lorempixel.com/400/200/food">
+				</div>
+				<div class="col-">col-</div>
+
+			</div>
+		</div>
+	</div>
+
+	<br /><br /><br /><br />
+
+	<br /><br /><br /><br />
+
+	<br /><br /><br /><br />
 
 	<div class="o-browser-width">
 		<div class="o-content-width u-mb-default">
@@ -932,378 +1294,7 @@
 		</div>
 	</div>
 
-	<!--Offset-->
-	<div class="o-browser-width">
-		<div class="o-content-width u-mb-default">
-			<h2>Offset</h2>
-			<div class="row u-auto-clear">
-
-				<div class="col-xs-100 col-md-50 col-lg-25 col-lg-offset-25">
-					col-xs-100<br />
-					col-md-50<br />
-					col-lg-25<br />
-					col-lg-offset-25
-				</div>
-
-				<div class="col-xs-100 col-md-50 col-lg-25 col-lg-offset-25">
-					col-xs-100<br />
-					col-md-50<br />
-					col-lg-25<br />
-					col-lg-offset-25
-				</div>
-
-
-			</div>
-
-		</div>
-	</div>
-
-	<!--Wrapping-->
-	<div class="o-browser-width">
-		<div class="o-content-width u-mb-default">
-			<h2>Wrapping</h2>
-			<div class="row">
-
-				<div class="col-30">col 30%</div>
-				<div class="col-30">col 30%</div>
-				<div class="col-50">col 50%</div>
-				<div class="col-33">col 33%</div>
-				<div class="col-33">col 33%</div>
-				<div class="col-33">col 33%</div>
-				<div class="col-20">col 20%</div>
-				<div class="col-100">col 100%</div>
-				<div class="col-50">col 50%</div>
-				<div class="col-30">col 30%</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!--Vertical gutter-->
-	<div class="o-browser-width">
-		<div class="o-content-width u-mb-default">
-			<h2>Vertical gutter (add <code>.u-vertical-gutter</code>) to <code>.row</code></h2>
-			<div class="row u-vertical-gutter">
-
-				<div class="col-25">col 25%</div>
-				<div class="col-75">col 75%</div>
-				<div class="col-33">col 33%</div>
-				<div class="col-33">col 33%</div>
-				<div class="col-33">col 33%</div>
-				<div class="col-20">col 20%</div>
-				<div class="col-50">col 50%</div>
-				<div class="col-30">col 30%</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!--Margin bottom-->
-	<div class="o-browser-width">
-		<div class="o-content-width u-mb-default">
-			<h2>Margin bottom (add <code>.u-mb-default</code> to <code>.row</code>)</h2>
-			<div class="row u-mb-default">
-
-				<div class="col-25">col 25%</div>
-				<div class="col-75">col 75%</div>
-
-			</div>
-			<div class="row u-mb-default u-auto-clear">
-
-				<div class="col-33">col 33%</div>
-				<div class="col-33">col 33%</div>
-				<div class="col-33">col 33%</div>
-
-			</div>
-			<div class="row u-mb-default">
-
-				<div class="col-20">col 20%</div>
-				<div class="col-50">col 50%</div>
-				<div class="col-30">col 30%</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!--No gutter-->
-	<div class="o-browser-width">
-		<div class="o-content-width u-mb-default">
-			<h2>No gutter (add <code>.u-no-gutter</code> to <code>.col</code>)</h2>
-			<div class="row">
-
-				<div class="col-20 u-no-gutter">col 20%</div>
-				<div class="col-50 u-no-gutter">col 50%</div>
-				<div class="col-30 u-no-gutter">col 30%</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!--Example no gutter-->
-	<div class="o-browser-width">
-		<div class="o-content-width u-mb-default">
-			<h2>Example no gutter</h2>
-
-			<div class="row">
-
-				<div class="col-33 u-no-gutter">
-					<h4>col 33%</h4>
-					<p>Lorem ipsum dolor amet sit lortem ipsum. Lorem ipsum dolor amet sit lortem ipsum. </p>
-				</div>
-				<div class="col-33 u-no-gutter u-txt-diap">
-					<img src="http://lorempixel.com/500/300/food">
-				</div>
-				<div class="col-33 u-no-gutter">
-					<div class="u-bgc-primary u-txt-diap">
-						<h4>col 33%</h4>
-						<p>Lorem ipsum dolor amet sit lortem ipsum. Lorem ipsum dolor amet sit lortem ipsum. </p>
-					</div>
-				</div>
-
-			</div>
-
-		</div>
-	</div>
-
-	<!--Small gutter-->
-	<div class="o-browser-width">
-		<div class="o-content-width u-mb-default">
-			<h2>Small gutter (add <code>.u-gutter-small</code> to <code>.row</code>)</h2>
-			<div class="row u-gutter-small">
-
-				<div class="col-20">col 20%</div>
-				<div class="col-50">col 50%</div>
-				<div class="col-30">col 30%</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!--Vertical small gutter-->
-	<div class="o-browser-width">
-		<div class="o-content-width u-mb-default">
-			<h2>Vertical small gutter (add <code>.u-vertical-gutter</code> and <code>.u-gutter-small</code>) to <code>.row</code></h2>
-			<div class="row u-vertical-gutter u-gutter-small">
-
-				<div class="col-25">col 25%</div>
-				<div class="col-75">col 75%</div>
-				<div class="col-33">col 33%</div>
-				<div class="col-33">col 33%</div>
-				<div class="col-33">col 33%</div>
-				<div class="col-20">col 20%</div>
-				<div class="col-50">col 50%</div>
-				<div class="col-30">col 30%</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!--Example of use small gutter-->
-	<div class="o-browser-width">
-		<div class="o-content-width u-mb-default">
-			<h2>Example of use small gutter</h2>
-			<div class="row u-gutter-small">
-
-				<div class="col-30"><img src="http://lorempixel.com/500/300/food"></div>
-				<div class="col-70">
-					<div class="row u-auto-clear u-gutter-small u-vertical-gutter">
-						<div class="col-20">
-							<div class="u-bgc-primary u-txt-diap">
-								<a href="#">col 20%</a>
-							</div>
-						</div>
-						<div class="col-20">
-							<div class="u-bgc-primary u-txt-diap">
-								<a href="#">col 20%</a>
-							</div>
-						</div>
-						<div class="col-20">
-							<div class="u-bgc-primary u-txt-diap">
-								<a href="#">col 20%</a>
-							</div>
-						</div>
-						<div class="col-20">
-							<div class="u-bgc-primary u-txt-diap">
-								<a href="#">col 20%</a>
-							</div>
-						</div>
-						<div class="col-20">
-							<div class="u-bgc-primary u-txt-diap">
-								<a href="#">col 20%</a>
-							</div>
-						</div>
-						<div class="col-20">
-							<div class="u-bgc-primary u-txt-diap">
-								<a href="#">col 20%</a>
-							</div>
-						</div>
-						<div class="col-20">
-							<div class="u-bgc-primary u-txt-diap">
-								<a href="#">col 20%</a>
-							</div>
-						</div>
-						<div class="col-20">
-							<div class="u-bgc-primary u-txt-diap">
-								<a href="#">col 20%</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!--Nested grid-->
-	<div class="o-browser-width">
-		<div class="o-content-width u-mb-default">
-			<h2>Nested grid</h2>
-			<div class="row u-mb-default">
-
-				<div class="col-25">col 25%</div>
-				<div class="col-75">
-					col-75<br />
-					with nested row
-					<div class="row">
-						<div class="col-33">col 33%</div>
-						<div class="col-33">
-							col 33%<br />
-							with nested row
-							<div class="row">
-								<div class="col-50">col 50%</div>
-								<div class="col-50">col 50%</div>
-							</div>
-						</div>
-						<div class="col-33">col 33%</div>
-					</div>
-
-				</div>
-
-			</div>
-
-
-		</div>
-	</div>
-
-	<!--Push pull-->
-	<div class="o-browser-width">
-		<div class="o-content-width u-mb-default">
-			<h2>Push pull</h2>
-			<div class="row u-mb-default">
-
-				<div class="col-30"><img src="http://lorempixel.com/500/300/food"></div>
-				<div class="col-70">col 70%</div>
-
-			</div>
-			<div class="row u-mb-default">
-
-				<div class="col-30 u-push-right"><img src="http://lorempixel.com/500/300/food"></div>
-				<div class="col-70">col 70%</div>
-
-			</div>
-
-		</div>
-	</div>
-
-	<!--Combining small and standard gutter-->
-	<div class="o-browser-width">
-		<div class="o-content-width">
-			<h2>Combining small and standard gutter</h2>
-
-			<div class="row u-gutter-small u-mb-default">
-
-				<div class="col-25">col 25%</div>
-				<div class="col-75">
-					col-75<br>
-					with nested row
-					<div class="row">
-						<div class="col-33">col 33%</div>
-						<div class="col-33">
-							col 33%<br>
-							with nested row
-							<div class="row u-gutter-small">
-								<div class="col-50">col 50%</div>
-								<div class="col-50">col 50%</div>
-							</div>
-						</div>
-						<div class="col-33">col 33%</div>
-					</div>
-
-				</div>
-
-			</div>
-
-		</div>
-	</div>
-
-	<div class="o-browser-width">
-		<div class="o-content-width">
-
-			<div class="row u-mb-default">
-
-				<div class="col-25">col 25%</div>
-				<div class="col-75">
-					col-75<br>
-					with nested row
-					<div class="row u-gutter-small">
-						<div class="col-33">col 33%</div>
-						<div class="col-33">
-							col 33%<br>
-							with nested row
-							<div class="row">
-								<div class="col-50">col 50%</div>
-								<div class="col-50">col 50%</div>
-							</div>
-						</div>
-						<div class="col-33">col 33%</div>
-					</div>
-
-				</div>
-
-			</div>
-
-		</div>
-	</div>
-
-	<br /><br /><br /><br />
-
-	<!--Vertical aligned-->
-	<div class="o-browser-width">
-		<div class="o-content-width">
-			<h2>Vertical aligned</h2>
-			<div class="row u-valigned">
-
-				<div class="col-xs-25">
-					col-xs-25<br />
-					<img src="http://lorempixel.com/400/200/food">
-				</div>
-				<div class="col-xs-25">col-xs-25</div>
-				<div class="col-xs-25">col-xs-25</div>
-
-			</div>
-		</div>
-	</div>
-
-	<br /><br /><br /><br />
-
-	<!--Justified and vertical aligned-->
-	<div class="o-browser-width">
-		<div class="o-content-width">
-			<h2>Justified and vertical aligned</h2>
-
-			<div class="row u-justified u-valigned">
-
-				<div class="col-">
-					col-<br />
-					<img src="http://lorempixel.com/400/200/food">
-				</div>
-				<div class="col-">col-</div>
-
-			</div>
-		</div>
-	</div>
-
-	<br /><br /><br /><br />
+	
 
 	<script src="dist/js/libs.js"></script>
 	<script src="dist/js/app.min.js"></script>
