@@ -93,30 +93,7 @@ $col-sizes: (
 	(	'100', 100)
 );
 
-// define default screensizes
-// these variables can be overruled by specifying them before this file
-$screen-xs-min: 0 !default;
-$screen-sm-min: 480px !default;
-$screen-md-min: 600px !default;
-$screen-lg-min: 800px !default;
-
-$screen-xs-max: $screen-sm-min - 1 !default;
-$screen-sm-max: $screen-md-min - 1 !default;
-$screen-md-max: $screen-lg-min - 1 !default;
-$screen-lg-max: 3000px !default;
-
-$screensizes: (
-    // name, min-width, max-width
-    (xs, $screen-xs-min, $screen-xs-max),
-    (sm, $screen-sm-min, $screen-sm-max),
-    (md, $screen-md-min, $screen-md-max),
-    (lg, $screen-lg-min, $screen-lg-max),
-);
-
 .u-auto-clear {
-    .col-12:nth-child(8n+1),
-    .col-14:nth-child(7n+1),
-    .col-16:nth-child(6n+1),
     .col-20:nth-child(5n+1),
     .col-25:nth-child(4n+1),
     .col-33:nth-child(3n+1),
@@ -125,6 +102,7 @@ $screensizes: (
     }
 }
 
+// screensizes, defined in variables.scss
 @each $screen-name, $min-width, $max-width in $screensizes {
 	@media all and (min-width: $min-width) {
 		@each $col-name, $col-width in $col-sizes {      
@@ -141,9 +119,6 @@ $screensizes: (
 	}
     @media all and (min-width: $min-width) and (max-width: $max-width) {
         .u-auto-clear {
-            .col-#{$screen-name}-12:nth-child(8n+1),
-            .col-#{$screen-name}-14:nth-child(7n+1),
-            .col-#{$screen-name}-16:nth-child(6n+1),
             .col-#{$screen-name}-20:nth-child(5n+1),
             .col-#{$screen-name}-25:nth-child(4n+1),
             .col-#{$screen-name}-33:nth-child(3n+1),
@@ -171,21 +146,6 @@ $screensizes: (
         @each $screen-name, $min-width, $max-width in $screensizes {
             @media all and (min-width: $min-width) and (max-width: $max-width) {
                 @each $col-name, $col-width in $col-sizes {
-                    @if $col-name == '16' {                        
-                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(7) ~ [class*=col-]:nth-child(4) {
-                            margin-right: 16.6665%;
-                        }
-                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(7) {
-                            margin-right: 0;
-                            margin-left: 16.6665%;
-                        }
-                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(8),
-                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(8) ~ [class*=col-],
-                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(9),
-                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(9) ~ [class*=col-] {
-                            width: 16.8%;
-                        }
-                    }
                     @if $col-name == '20' {                        
                         .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(6) ~ [class*=col-]:nth-child(3) {
                             margin-right: 20%;
