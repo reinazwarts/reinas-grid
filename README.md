@@ -13,3 +13,6 @@ html/css grid
 - Horizontal centered aligned columns option (with commensurate layout)
 - Vertical centered columns per row option
 - Flexible width option (depending on amount of items in row)
+
+
+[Demo page](http://reinazwarts.github.io/reinas-grid/ "Demo page Reina's grid")
