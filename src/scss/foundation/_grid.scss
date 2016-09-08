@@ -43,7 +43,15 @@
     &.u-vertical-gutter.u-gutter-small > [class*=col-] {
         margin-bottom: ($spacing-default / 2);
     }
-
+	&.u-no-gutter {
+		[class*=col-] {
+			padding: 0; 
+		}
+	}
+	&.u-no-sides-gutter {
+		margin-left: ($spacing-default / -1);
+		margin-right: ($spacing-default / -1);
+	}
 }
 
 [class*=col-] {
