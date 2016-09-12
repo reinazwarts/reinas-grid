@@ -1,5 +1,5 @@
 body.debug {
-
+	
     position: relative;
     &:before,
     &:after {
@@ -29,7 +29,7 @@ body.debug {
 
     .row {
 	    background-color: rgba(0, 100, 255, 0.1);
-        outline: dashed 1px rgba(0, 100, 255, 0.3);
+        outline: dashed 1px rgba(0, 100, 255, 0.6);
 
         &.u-gutter-small > [class*=col-]:before {
             left: ($spacing-default / 4);
@@ -44,7 +44,7 @@ body.debug {
 	    &:not([class*=u-bgc-]) {
             background-color: rgba(255, 100, 255, 0.1);
 	    }
-        outline: dashed 1px rgba(255, 100, 255, 0.4);
+        outline: dashed 1px rgba(255, 100, 255, 0.6);
         position: relative;
         &:not(.u-no-gutter):before,
         &:not(.u-no-gutter):after {
@@ -65,6 +65,7 @@ body.debug {
     .o-content-width {
         border-left: dashed 1px rgba(0, 100, 255, 0.3);
         border-right: dashed 1px rgba(0, 100, 255, 0.3);
+		
         &:before,
         &:after {
             content: '';

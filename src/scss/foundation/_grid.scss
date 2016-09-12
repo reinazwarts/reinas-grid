@@ -48,9 +48,13 @@
 			padding: 0; 
 		}
 	}
-	&.u-no-sides-gutter {
-		margin-left: ($spacing-default / -1);
-		margin-right: ($spacing-default / -1);
+	&.u-background-gutter {
+		[class*=col-] {
+			padding-left: ($spacing-default / 4);
+			padding-right: ($spacing-default / 4);
+			margin-left: ($spacing-default / 4);
+			margin-right: ($spacing-default / 4);
+		}
 	}
 }
 
@@ -136,7 +140,18 @@ $col-sizes: (
         }
     }
 }
-
+@each $screen-name, $min-width, $max-width in $screensizes {
+	@media all and (min-width: $min-width) {
+		@each $col-name, $col-width in $col-sizes {      
+			.row.u-background-gutter .col-#{$col-name} {
+				width: calc(#{$col-width*1%} - #{$spacing-default / 2});
+			}
+			.row.u-background-gutter .col-#{$screen-name}-#{$col-name} {
+				width: calc(#{$col-width*1%} - #{$spacing-default / 2});
+			}
+		}
+	}
+}
 
 
 .u-centered {
