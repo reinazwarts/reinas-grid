@@ -152,7 +152,14 @@ $col-sizes: (
 		}
 	}
 }
-
+// hidden utility
+@each $screen-name, $min-width, $max-width in $screensizes {
+	@media all and (max-width: $max-width) {
+		.u-#{$screen-name}-hidden {
+			display: none!important;
+		}
+	}
+}
 
 .u-centered {
     text-align: center;
