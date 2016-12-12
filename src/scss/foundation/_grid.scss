@@ -335,3 +335,30 @@ $col-sizes: (
 	    vertical-align: middle;
 	}
 }
+
+
+.u-flex {
+	display: flex;
+	flex-wrap: wrap;
+
+	&--auto {
+		[class^=col-],
+		[class*= col-] {
+			flex-basis: 0;
+			flex-grow: 1;
+		}
+	}
+	
+	&--fixed {
+		[class^=col-],
+		[class*= col-] {
+			flex-grow: 0;
+			flex-basis: auto;
+		}
+	}
+
+	&--centered {
+		justify-content: center;
+	}
+	
+}

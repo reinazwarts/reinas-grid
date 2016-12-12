@@ -5,9 +5,173 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Reina's grid</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="Content/css/app.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/app.css" />
 </head>
-<body ontouchstart="" class="debug">
+<body ontouchstart="" class="">
+
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	<div class="triangle">
+		<div class="triangle-inner">
+
+		</div>
+	</div>
+	<div class="triangle triangle2">
+		<div class="triangle-inner">
+
+		</div>
+	</div>
+	<div class="triangle triangle3">
+		<div class="triangle-inner">
+
+		</div>
+	</div>
+	
+	<div class="o-browser-width">
+		<div class="o-content-width u-pb-default">
+			<h2>:target</h2>
+
+			<div class="row">
+				<style>
+					:target {
+						animation: highlight 1s ease;  
+						transform: translateX(20px);     
+					}
+					@keyframes highlight {
+						0% { border-left-color: red; }
+						100% { border-left-color: white; }
+					}
+					section > div {
+						border-left: 40px solid white;
+						padding: 10px;
+						transition: all 0.5s ease;     
+						padding-right: 50px;
+						margin-left: -20px;    
+					}
+				</style>
+
+				<nav>
+					<a href="#one">1</a>
+					<a href="#two">2</a>
+					<a href="#three">3</a>
+				</nav>
+
+				<section>
+					<div id="one"><h2>One</h2>Pellentesque habitant morbi ...</div>
+					<div id="two"><h2>Two</h2>Pellentesque habitant morbi ...</div>
+					<div id="three"><h2>Three</h2>Pellentesque habitant morbi ...</div>
+				</section>​
+
+
+			</div>
+
+		</div>
+	</div>
+
+
+	<div class="o-browser-width">
+		<div class="o-content-width u-pb-default">
+			<h2>Image thumbs</h2>
+
+			<div class="row">
+				<style>
+					.thumbs2 {
+						position: relative;
+					}
+
+					.thumbs2 > span {
+						display: none;
+						width: 300px;
+						height: 300px;
+						border: 1px solid #e5e5e5;
+						padding: 3px;
+					}
+
+					.thumbs2 > span img {
+						flex: 0 0 auto;
+						max-width: 100%;
+						max-height: 100%;
+						-webkit-align-self: center;
+						align-self: center;
+						margin: auto;
+						object-fit: scale-down;
+					}
+
+					.thumbs2 input {
+						display: none;
+					}
+
+					.thumbs2 > input:checked + span {
+						display: -webkit-box;
+						display: -moz-box;
+						display: -ms-flexbox;
+						display: -webkit-flex;
+						display: flex;
+					}
+
+					.thumbs-small2 label {
+						position: relative;
+						display: inline-block;
+						opacity: .3;
+						transition: opacity .3s ease-in-out;
+						cursor: pointer;
+						border: 1px solid #8a8a8a;
+						text-align: center;
+						margin: 0 .25em;
+						padding: 3px;
+
+						width: 60px;
+						height: 60px;
+
+						display: -webkit-box;
+						display: -moz-box;
+						display: -ms-flexbox;
+						display: -webkit-flex;
+						display: flex;
+					}
+					.thumbs2 > input:nth-of-type(1):checked ~ .thumbs-small2 label:nth-child(1),
+					.thumbs2 > input:nth-of-type(2):checked ~ .thumbs-small2 label:nth-child(2),
+					.thumbs2 > input:nth-of-type(3):checked ~ .thumbs-small2 label:nth-child(3),
+					.thumbs2 > input:nth-of-type(4):checked ~ .thumbs-small2 label:nth-child(4),
+					.thumbs2 > input:nth-of-type(5):checked ~ .thumbs-small2 label:nth-child(5) {
+						opacity: 1;
+						border-color: #1c5091;
+					}
+					.thumbs-small2 {
+						padding: 1em 0;
+						text-align: center;
+						display: flex;
+					}
+					.thumbs-small2 img {
+						flex: 0 0 auto;
+						max-width: 100%;
+						max-height: 100%;
+						-webkit-align-self: center;
+						align-self: center;
+						margin: auto;
+						object-fit: scale-down;
+					}
+				</style>
+
+				<div class="thumbs2">
+					<input type="radio" name="thumbs2" id="tt1" checked /><span><img src="http://placehold.it/350x250" /></span>
+					<input type="radio" name="thumbs2" id="tt2" /><span><img src="http://placehold.it/100x180" /></span>
+					<input type="radio" name="thumbs2" id="tt3" /><span><img src="http://placehold.it/800x200" /></span>
+					<input type="radio" name="thumbs2" id="tt4" /><span><img src="http://placehold.it/500x600" /></span>
+
+					<div class="thumbs-small2">
+						<label for="tt1"><img src="http://placehold.it/350x250" /></label>
+						<label for="tt2"><img src="http://placehold.it/100x180" /></label>
+						<label for="tt3"><img src="http://placehold.it/800x200" /></label>
+						<label for="tt4"><img src="http://placehold.it/500x600" /></label>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
 	<style>
 		.loader {
 			position: relative;
@@ -16,6 +180,7 @@
 			overflow: hidden;
 			animation: h 3s infinite;
 		}
+
 		[class*=loader-bar] {
 			position: absolute;
 			left: 0;
@@ -23,54 +188,92 @@
 			width: 25%;
 			height: 100%;
 		}
+
 		.loader-bar1 {
 			background-color: #008FD3;
 			animation: d 3s infinite;
 		}
+
 		.loader-bar2 {
 			background-color: #96BD0D;
 			left: 25%;
 			animation: e 3s infinite;
 		}
+
 		.loader-bar3 {
 			background-color: #E2004F;
 			left: 50%;
 			animation: f 3s infinite;
 		}
+
 		.loader-bar4 {
 			background-color: #F19300;
 			left: 75%;
 			animation: g 3s infinite;
 		}
+
 		.loader-text {
 			position: absolute;
 			left: 0;
 			right: 0;
 			margin: auto;
 			color: #fff;
-
 		}
 
 		@keyframes grow1 {
-		  0%   { bottom: -80px; }
-		  15%,100% { bottom: 0; }
+			0% {
+				bottom: -80px;
+			}
+
+			15%,100% {
+				bottom: 0;
+			}
 		}
+
 		@keyframes grow2 {
-		  0%,15%   { bottom: -80px; }
-		  30%,100% { bottom: 0; }
+			0%,15% {
+				bottom: -80px;
+			}
+
+			30%,100% {
+				bottom: 0;
+			}
 		}
+
 		@keyframes grow3 {
-		  0%,30%   { bottom: -80px; }
-		  45%,100% { bottom: 0; }
+			0%,30% {
+				bottom: -80px;
+			}
+
+			45%,100% {
+				bottom: 0;
+			}
 		}
+
 		@keyframes grow4 {
-		  0%,45%   { bottom: -80px; }
-		  60%,100% { bottom: 0; }
+			0%,45% {
+				bottom: -80px;
+			}
+
+			60%,100% {
+				bottom: 0;
+			}
 		}
+
 		@keyframes roundturnandshrink {
-		  0%,60%   { border-radius: 0; }
-		  70%,80% { border-radius: 50%; transform: rotate(0deg) scale(1); }
-		  100% { border-radius: 50%; transform: rotate(360deg) scale(0); }
+			0%,60% {
+				border-radius: 0;
+			}
+
+			70%,80% {
+				border-radius: 50%;
+				transform: rotate(0deg) scale(1);
+			}
+
+			100% {
+				border-radius: 50%;
+				transform: rotate(360deg) scale(0);
+			}
 		}
 
 		/*@keyframes d{0%{bottom:-80px}15%,100%{bottom:0}}
@@ -78,8 +281,6 @@
 		@keyframes f{0%,30%{bottom:-80px}45%,100%{bottom:0}}
 		@keyframes g{0%,45%{bottom:-80px}60%,100%{bottom:0}}
 		@keyframes h{0%,60%{border-radius:0}70%,80%{transform:rotate(0deg) scale(1)}70%,80%,to{border-radius:50%}to{transform:rotate(1turn) scale(0)}}*/
-
-
 	</style>
 	<div class="loader">
 		<div class="loader-bar1"></div>
@@ -97,22 +298,28 @@
 			fill: currentColor;
 			margin-right: 5px;
 		}
+
 		.svg-icon-link {
 			color: red;
 		}
-		.svg-icon-link:hover {
-			color: rgba(237, 0, 255, 0.50);
-		}
+
+			.svg-icon-link:hover {
+				color: rgba(237, 0, 255, 0.50);
+			}
+
 		.svg-icon-link2 {
 			color: cornflowerblue;
 		}
-		.svg-icon-link2:hover {
-			color: #a3de40;
-		}
+
+			.svg-icon-link2:hover {
+				color: #a3de40;
+			}
+
 		.svg-phone {
 			width: 22px;
 			height: 22px;
 		}
+
 		.svg-mail {
 			width: 23px;
 			height: 18px;
@@ -695,7 +902,7 @@
 					</div>
 				</div>
 				<div class="col-33">
-					<img src="http://lorempixel.com/500/300/food">
+					<img src="aitutaki.jpg">
 				</div>
 				<div class="col-33">
 					<div class="u-bgc-primary u-txt-diap">
@@ -1671,7 +1878,7 @@
 					<p>Lorem ipsum dolor amet sit lortem ipsum. Lorem ipsum dolor amet sit lortem ipsum. </p>
 				</div>
 				<div class="col-33 u-no-gutter u-txt-diap">
-					<img src="http://lorempixel.com/500/300/food">
+					<img src="aitutaki.jpg">
 				</div>
 				<div class="col-33 u-no-gutter">
 					<div class="u-bgc-primary u-txt-diap">
@@ -1724,7 +1931,7 @@
 			<h2>Example of use small gutter</h2>
 			<div class="row u-gutter-small">
 
-				<div class="col-30"><img src="http://lorempixel.com/500/300/food"></div>
+				<div class="col-30"><img src="aitutaki.jpg"></div>
 				<div class="col-70">
 					<div class="row u-auto-clear u-gutter-small u-vertical-gutter">
 						<div class="col-20">
@@ -1811,13 +2018,13 @@
 			<h2>Push pull</h2>
 			<div class="row container">
 
-				<div class="col-30"><img src="http://lorempixel.com/500/300/food"></div>
+				<div class="col-30"><img src="aitutaki.jpg"></div>
 				<div class="col-70">col 70%</div>
 
 			</div>
 			<div class="row container">
 
-				<div class="col-30 u-push-right"><img src="http://lorempixel.com/500/300/food"></div>
+				<div class="col-30 u-push-right"><img src="aitutaki.jpg"></div>
 				<div class="col-70">col 70%</div>
 
 			</div>
@@ -1895,7 +2102,7 @@
 
 				<div class="col-xs-25">
 					col-xs-25<br />
-					<img src="http://lorempixel.com/400/200/food">
+					<img src="aitutaki.jpg">
 				</div>
 				<div class="col-xs-25">col-xs-25</div>
 				<div class="col-xs-25">col-xs-25</div>
@@ -1915,7 +2122,7 @@
 
 				<div class="col-">
 					col-<br />
-					<img src="http://lorempixel.com/400/200/food">
+					<img src="aitutaki.jpg">
 				</div>
 				<div class="col-">col-</div>
 
