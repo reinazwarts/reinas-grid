@@ -1,0 +1,10 @@
+.o-browser-width {
+    width: 100%;
+    font-size: 1.6rem;//repeat this here to solve a strange problem with jquery
+}
+.o-content-width {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    max-width: 73.125em; //=1170px    
+}

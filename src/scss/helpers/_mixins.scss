@@ -1,0 +1,71 @@
+@mixin border-radius($topleft, $topright, $rightbottom, $leftbottom) {
+    -moz-border-radius: $topleft $topright $rightbottom $leftbottom;
+	/*for android separately*/
+	-webkit-border-top-left-radius: $topleft;
+	border-top-left-radius: $topleft;
+	-webkit-border-top-right-radius: $topright;
+	border-top-right-radius: $topright;
+	-webkit-border-bottom-right-radius: $rightbottom;
+	border-bottom-right-radius: $rightbottom;
+	-webkit-border-bottom-left-radius: $leftbottom;
+	border-bottom-left-radius: $leftbottom;
+}
+
+// use: @extend %clearfix;
+%clearfix {
+    content: '';
+	display: table;
+	clear: both;
+}
+
+// use: @include mq(xs) {...}
+@mixin mq($screensize) {
+    // min and max
+    @if $screensize == xs {
+        @media all and (max-width: $xs-max) { @content; }
+    }
+    @if $screensize == sm {
+        @media all and (min-width: $sm-min) and (max-width: $sm-max) { @content; }
+    }
+    @if $screensize == md {
+        @media all and (min-width: $md-min) and (max-width: $md-max) { @content; }
+    }
+    @if $screensize == lg {
+        @media all and (min-width: $lg-min) and (max-width: $lg-max) { @content; }
+    }
+    @if $screensize == xl {
+        @media all and (min-width: $xl-min) { @content; }
+    }
+    // min
+    @if $screensize == xs-min {
+        @media all and (min-width: $xs-min) { @content; }
+    }
+    @if $screensize == sm-min {
+        @media all and (min-width: $sm-min) { @content; }
+    }
+    @if $screensize == md-min {
+        @media all and (min-width: $md-min) { @content; }
+    }
+    @if $screensize == lg-min {
+        @media all and (min-width: $lg-min) { @content; }
+    }
+    @if $screensize == xl-min {
+        @media all and (min-width: $xl-min) { @content; }
+    }
+    // max
+    @if $screensize == xs-max {
+        @media all and (max-width: $xs-max) { @content; }
+    }
+    @if $screensize == sm-max {
+        @media all and (max-width: $sm-max) { @content; }
+    }
+    @if $screensize == md-max {
+        @media all and (max-width: $md-max) { @content; }
+    }
+    @if $screensize == lg-max {
+        @media all and (max-width: $lg-max) { @content; }
+    }
+    @if $screensize == xl-max {
+        @media all and (max-width: $xl-max) { @content; }
+    }
+}

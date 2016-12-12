@@ -1,0 +1,364 @@
+.o-content-width {
+	padding-left: ($spacing-default / 2);
+	padding-right: ($spacing-default / 2);
+
+	&.u-no-padding {
+		padding: 0;
+	}    
+}
+
+.clearfix:after {
+    @extend %clearfix;
+}
+
+.row {
+	margin-left: ($spacing-default / -2);
+	margin-right: ($spacing-default / -2);
+	display: block;//in case this is set to a non-div, i.e. a li or span
+
+	&:after {
+		@extend %clearfix;		
+	}
+	
+	&.u-no-margin {//don't use this combined with no-gutter on cols
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+    // small gutter
+    &.u-gutter-small {
+        margin-left: ($spacing-default / -4);
+		margin-right: ($spacing-default / -4);
+
+        > [class*=col-] {
+            padding-left: ($spacing-default / 4);
+            padding-right: ($spacing-default / 4);
+        }
+    }
+
+    // vertical gutter
+    &.u-vertical-gutter > [class*=col-] {
+        margin-bottom: ($spacing-default);
+    }
+    &.u-vertical-gutter.u-gutter-small > [class*=col-] {
+        margin-bottom: ($spacing-default / 2);
+    }
+	&.u-no-gutter {
+		[class*=col-] {
+			padding: 0; 
+		}
+	}
+	&.u-background-gutter {
+		[class*=col-] {
+			padding-left: ($spacing-default / 4);
+			padding-right: ($spacing-default / 4);
+			margin-left: ($spacing-default / 4);
+			margin-right: ($spacing-default / 4);
+		}
+	}
+}
+
+[class*=col-] {
+	float: left;
+	padding-left: ($spacing-default / 2);
+    padding-right: ($spacing-default / 2);
+
+    &.u-no-gutter {
+	    padding: 0; // can be replaced with u-p0
+    }
+    &.u-no-gutter-left {
+	    padding-left: 0;
+    }
+    &.u-no-gutter-right {
+	    padding-right: 0;
+    }
+    &.u-push-right {
+        float: right;
+    }
+}
+
+
+// column sizes
+$col-sizes: (
+	//name, width in %
+	(	'10', 10),
+	(	'12', 12.5), //100:8
+	(	'14', 14.2857), //100:7
+	(	'15', 15),
+	(	'16', 16.6665), //100:6
+	(	'20', 20),
+	(	'25', 25),
+	(	'30', 30),
+	(	'33', 33.3333),
+	(	'35', 35),
+	(	'40', 40),
+	(	'45', 45),
+	(	'50', 50),
+	(	'55', 55),
+	(	'60', 60),
+	(	'65', 65),
+	(	'67', 66.6666),
+	(	'70', 70),
+	(	'75', 75),
+	(	'80', 80),
+	(	'90', 90),
+	(	'100', 100)
+);
+
+.u-auto-clear {
+    .col-20:nth-child(5n+1),
+    .col-25:nth-child(4n+1),
+    .col-33:nth-child(3n+1),
+    .col-50:nth-child(2n+1) {
+        clear: both;
+    }
+}
+
+// screensizes, defined in variables.scss
+@each $screen-name, $min-width, $max-width in $screensizes {
+	@media all and (min-width: $min-width) {
+		@each $col-name, $col-width in $col-sizes {      
+			.col-#{$col-name} {
+				width: $col-width*1%;
+			}
+			.col-#{$screen-name}-#{$col-name} {
+				width: $col-width*1%;
+			}
+			.col-#{$screen-name}-offset-#{$col-name} {
+				margin-left: $col-width*1%;
+			}         
+		}
+	}
+    @media all and (min-width: $min-width) and (max-width: $max-width) {
+        .u-auto-clear {
+            .col-#{$screen-name}-20:nth-child(5n+1),
+            .col-#{$screen-name}-25:nth-child(4n+1),
+            .col-#{$screen-name}-33:nth-child(3n+1),
+            .col-#{$screen-name}-50:nth-child(2n+1) {
+                clear: both;
+            }
+        }
+    }
+}
+@each $screen-name, $min-width, $max-width in $screensizes {
+	@media all and (min-width: $min-width) {
+		@each $col-name, $col-width in $col-sizes {      
+			.row.u-background-gutter .col-#{$col-name} {
+				width: calc(#{$col-width*1%} - #{$spacing-default / 2});
+			}
+			.row.u-background-gutter .col-#{$screen-name}-#{$col-name} {
+				width: calc(#{$col-width*1%} - #{$spacing-default / 2});
+			}
+		}
+	}
+}
+// hidden utility
+@each $screen-name, $min-width, $max-width in $screensizes {
+	@media all and (max-width: $max-width) {
+		.u-#{$screen-name}-hidden {
+			display: none!important;
+		}
+	}
+}
+
+.u-centered {
+    text-align: center;
+    font-size: 0;
+    [class*=col-] {
+        font-size: 1.6rem;
+        float: none;
+	    display: inline-block;
+	    vertical-align: top;
+        text-align: left;
+    }
+
+    &:not(.u-centered-flat) {
+        @each $screen-name, $min-width, $max-width in $screensizes {
+            @media all and (min-width: $min-width) and (max-width: $max-width) {
+                @each $col-name, $col-width in $col-sizes {
+                    @if $col-name == '20' {                        
+                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(6) ~ [class*=col-]:nth-child(3) {
+                            margin-right: 20%;
+                        }
+                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(6) {
+                            margin-right: 0;
+                            margin-left: 20%;
+                        }
+                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(7),
+                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(7) ~ [class*=col-],
+                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(8),
+                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(8) ~ [class*=col-] {
+                            width: 20.1%;
+                        }
+                    }
+                    @if $col-name == '25' {
+                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(5),
+                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(5) ~ [class*=col-],
+                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(6),
+                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(6) ~ [class*=col-] {
+                            width: 25.1%;
+                        }
+                    }
+                    @if $col-name == '33' {
+                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(4),
+                        .col-#{$screen-name}-#{$col-name}:first-child:nth-last-child(4) ~ [class*=col-] {
+                            width: 33.4%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+// justified grid (with equal width columns only!)
+// i.e. three columns of 25% become 33.3333% to fill up the row
+.u-justified {
+	[class*=col-] {
+		width: 100%;
+	}
+	@each $screensize in $screensizes {
+		$name:		nth($screensize, 1);
+		$min-width: nth($screensize, 2);
+		$max-width: nth($screensize, 3);
+
+		@if $name == sm {
+
+			@media all and (min-width: $min-width) and (max-width: $max-width) {
+				[class*=col-] {
+					width: 50%;
+				}
+				[class*=col-]:nth-child(2n+1) {
+					clear: both;
+				}
+				[class*=col-]:first-child:nth-last-child(1) {
+					width: 100%;
+				}
+
+			}
+
+		} @elseif $name == md {
+
+			@media all and (min-width: $min-width) and (max-width: $max-width) {
+				[class*=col-] {
+					width: 33%;
+				}
+				[class*=col-]:nth-child(3n+1) {
+					clear: both;
+				}
+
+				[class*=col-]:first-child:nth-last-child(1) {
+					width: 100%;
+				}
+
+				[class*=col-]:first-child:nth-last-child(2),
+				[class*=col-]:first-child:nth-last-child(2) ~ [class*=col-],
+				[class*=col-]:first-child:nth-last-child(4),
+				[class*=col-]:first-child:nth-last-child(4) ~ [class*=col-] {
+					width: 50%;
+					clear: none;
+				}
+				[class*=col-]:first-child:nth-last-child(4) ~ [class*=col-]:nth-child(2n+1) {
+					clear: both;
+				}
+
+				[class*=col-]:first-child:nth-last-child(3),
+				[class*=col-]:first-child:nth-last-child(3) ~ [class*=col-],
+				[class*=col-]:first-child:nth-last-child(5),
+				[class*=col-]:first-child:nth-last-child(5) ~ [class*=col-] {
+					width: 33.3333%;
+				}
+
+			}
+
+		} @elseif $name == lg {
+
+			@media all and (min-width: $min-width) {
+				[class*=col-] {
+					width: 25%;
+				}
+				[class*=col-]:nth-child(4n+1) {
+					clear: both;
+				}
+
+				[class*=col-]:first-child:nth-last-child(1) {
+					width: 100%;
+				}
+
+				[class*=col-]:first-child:nth-last-child(2),
+				[class*=col-]:first-child:nth-last-child(2) ~ [class*=col-] {
+					width: 50%;
+					clear: none;
+				}
+				[class*=col-]:first-child:nth-last-child(2) ~ [class*=col-]:nth-child(2n+1) {
+					clear: both;
+				}
+
+				[class*=col-]:first-child:nth-last-child(3),
+				[class*=col-]:first-child:nth-last-child(3) ~ [class*=col-],
+				[class*=col-]:first-child:nth-last-child(5),
+				[class*=col-]:first-child:nth-last-child(5) ~ [class*=col-],
+				[class*=col-]:first-child:nth-last-child(6),
+				[class*=col-]:first-child:nth-last-child(6) ~ [class*=col-] {
+					width: 33.3333%;
+					clear: none;
+				}
+				[class*=col-]:first-child:nth-last-child(3) ~ [class*=col-]:nth-child(3n+1),
+				[class*=col-]:first-child:nth-last-child(5) ~ [class*=col-]:nth-child(3n+1),
+				[class*=col-]:first-child:nth-last-child(6) ~ [class*=col-]:nth-child(3n+1) {
+					clear: both;
+				}
+			}
+
+		}
+	}
+}
+
+
+
+
+
+
+
+
+/* vertical aligned flexgrid */
+.u-valigned {
+	font-size: 0;
+	[class*=col-] {
+		font-size: 1.6rem;
+        float: none;
+	    display: inline-block;
+	    vertical-align: middle;
+	}
+}
+
+
+.u-flex {
+	display: flex;
+	flex-wrap: wrap;
+
+	&--auto {
+		[class^=col-],
+		[class*= col-] {
+			flex-basis: 0;
+			flex-grow: 1;
+		}
+	}
+	
+	&--fixed {
+		[class^=col-],
+		[class*= col-] {
+			flex-grow: 0;
+			flex-basis: auto;
+		}
+	}
+
+	&--centered {
+		justify-content: center;
+	}
+	
+}

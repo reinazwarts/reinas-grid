@@ -1,0 +1,12 @@
+// strips units from values
+// isn't this in compass also?? unitess()?
+@function strip-units($number) {
+    @return $number / ($number * 0 + 1);
+}
+
+// convert pixels to em
+// 100% = 1 em ~= 16px ~= 14pt
+// the default font size in the browser is usually approximately 16px and usually approximately 14pt but always 100% and 1em.
+@function em($px, $base: 16px) {
+    @return ($px / $base) * 1em;
+}

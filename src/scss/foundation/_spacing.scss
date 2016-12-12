@@ -1,0 +1,41 @@
+$spacing-default: 40px !default; // TO REM!!!
+$spacing-tiny: round($spacing-default/4);
+$spacing-small: round($spacing-default/3);
+$spacing-medium: round($spacing-default/2);
+$spacing-large: round($spacing-default*1.5);
+$spacing-huge: round($spacing-default*2);
+
+// none, tiny, small, large, huge
+$spacings: (
+	('tiny'	,	$spacing-tiny),
+	('small',	$spacing-small),
+	('medium',	$spacing-medium),
+	('default',	$spacing-default),
+	('large',	$spacing-large),
+	('huge'	,	$spacing-huge)
+);
+$sides: (
+	('', ''),
+	('t', '-top'),
+	('r', '-right'),
+	('b', '-bottom'),
+	('l', '-left')
+);
+
+@each $side-name, $side-property in $sides { 
+	.u-m#{$side-name}-none {
+		margin#{$side-property}: 0 !important;
+	}
+	.u-p#{$side-name}-none {
+		padding#{$side-property}: 0 !important;
+	}
+	@each $spacing-name, $spacing-value in $spacings {      
+	
+		.u-m#{$side-name}-#{$spacing-name} {
+			margin#{$side-property}: $spacing-value !important;
+		}
+		.u-p#{$side-name}-#{$spacing-name} {
+			padding#{$side-property}: $spacing-value !important;
+		} 
+	}
+}
