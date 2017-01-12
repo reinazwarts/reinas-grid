@@ -59,8 +59,10 @@ var gulp = require('gulp-help')(require('gulp')),// define gulp and extend its t
 	sourcemaps = require('gulp-sourcemaps'),
 	stylish = require('jshint-stylish'),
 	uglify = require('gulp-uglify'),// for minifying js files
-	watch = require('gulp-watch');// gulp has its own built in watch function, but that doesn't watch for new or deleted file. The gulp-watch module is more powerful.
-
+	watch = require('gulp-watch'),// gulp has its own built in watch function, but that doesn't watch for new or deleted file. The gulp-watch module is more powerful.
+	svgstore = require('gulp-svgstore'),
+	//svgmin = require('gulp-svgmin'),
+	rename = require('gulp-rename');
 
 // set up sass tasks
 var autoprefixerOptions = {
@@ -184,6 +186,14 @@ gulp.task('build-sass', sassDescription, function() {
 	//});
 
 
+	gulp.task('svgstore', function () {
+		return gulp
+			.src(srcFolder + '**/*.svg')
+			.pipe(rename({ prefix: 'iconnn-' }))
+			.pipe(svgstore())
+			.pipe(gulp.dest(distFolder + 'svg/'));
+	});
+
 	// set up image tasks
 	var optimizeImagesDescription = 'Optimize/compress images';
 	gulp.task('optimize-images', optimizeImagesDescription, function() {
@@ -241,7 +251,7 @@ gulp.task('build-sass', sassDescription, function() {
 	var buildDescription = 'Do all necessary stuff for deployment';
 	gulp.task('build', buildDescription, function() {
 		//we're using runSequence because init has to be finished before building js and sass
-		runSequence('clean-libs', 'init', ['build-js', 'build-sass', 'optimize-images', 'dist-fonts']);
+		runSequence('clean-libs', 'init', ['build-js', 'build-sass', 'optimize-images', 'dist-fonts', 'svgstore']);
 		// runSequence('clean-libs', 'init', ['build-js', 'build-sass']);
 	});
 

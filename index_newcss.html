@@ -9,23 +9,25 @@
 </head>
 <body ontouchstart="" class="">
 
-	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-	<div class="triangle">
-		<div class="triangle-inner">
+	<!-- load combined svg file (with symbols) into body-->
+	<script>
+    (function (doc) {
+      var scripts = doc.getElementsByTagName('script')
+      var script = scripts[scripts.length - 1]
+      var xhr = new XMLHttpRequest()
+      xhr.onload = function () {
+        var div = doc.createElement('div')
+        div.innerHTML = this.responseText
+        div.style.display = 'none'
+        script.parentNode.insertBefore(div, script)
+      }
+      xhr.open('get', '/dist/svg/src.svg', true)
+      xhr.send()
+    })(document)
+	</script>
 
-		</div>
-	</div>
-	<div class="triangle triangle2">
-		<div class="triangle-inner">
-
-		</div>
-	</div>
-	<div class="triangle triangle3">
-		<div class="triangle-inner">
-
-		</div>
-	</div>
+	<h1>svg sprite (created with svgstore) file is loaded async with javascript</h1>
+	<svg width="100" height="100"><use xlink:href='#iconnn-dunlop-feature-certified-04'></svg>
 	
 	<div class="o-browser-width">
 		<div class="o-content-width u-pb-default">
